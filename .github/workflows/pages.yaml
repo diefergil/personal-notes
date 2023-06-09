@@ -32,7 +32,8 @@ jobs:
           # Number of commits to fetch. 0 indicates all history.
           # Default: 1
           fetch-depth: 0
-      - uses: actions/setup-python@v2
+      - uses: pdm-project/setup-pdm@main
+        name: Setup Python and PDM
         with:
           python-version: 3.11
 
