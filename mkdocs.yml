@@ -1,5 +1,6 @@
-site_name: Diego Fernández blog
-site_url: https://example.com
+site_description: My personal notes
+site_author: Diego
+site_url: https://diefergil.github.io/blue-book
 
 nav:
     - Home: index.md
