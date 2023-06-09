@@ -1,6 +1,7 @@
 site_description: My personal notes
 site_author: Diego
-site_url: https://diefergil.github.io/blue-book
+site_url: https://diefergil.github.io/personal-notes
+site_name: My personal notes
 
 nav:
     - Home: index.md
