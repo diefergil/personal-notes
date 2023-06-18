@@ -1,12 +1,15 @@
+---
 site_description: My personal notes
 site_author: Diego
 site_url: https://diefergil.github.io/personal-notes
 site_name: My personal notes
 
 nav:
-    - Home: index.md
-    - About: about.md
-
+  - Home: index.md
+  - Python:
+      - Tests:
+          - Pytests: python/pytest.md
+  - About: about.md
 
 plugins:
   - search
@@ -35,7 +38,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: '!!python/name:pymdownx.emoji.to_svg'
+      emoji_generator: "!!python/name:pymdownx.emoji.to_svg"
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
@@ -61,7 +64,7 @@ theme:
 
   palette:
     # Light mode
-    - media: '(prefers-color-scheme: light)'
+    - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: blue grey
       accent: light blue
@@ -70,7 +73,7 @@ theme:
         name: Switch to dark mode
 
     # Dark mode
-    - media: '(prefers-color-scheme: dark)'
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: blue grey
       accent: light blue
