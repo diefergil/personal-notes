@@ -92,3 +92,7 @@ extra:
 
 repo_name: diefergil/personal-notes
 repo_url: https://github.com/diefergil/personal-notes
+
+
+extra_files:
+  - ads.txt
