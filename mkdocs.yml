@@ -22,6 +22,9 @@ plugins:
       minify_html: true
   - section-index
   - mkdocs-newsletter
+  - mkdocs-simple-hooks:
+      hooks:
+        on_post_build: "docs.hooks:copy_ads_txt"
 
 markdown_extensions:
   - abbr
@@ -92,7 +95,3 @@ extra:
 
 repo_name: diefergil/personal-notes
 repo_url: https://github.com/diefergil/personal-notes
-
-
-extra_files:
-  - ads.txt
