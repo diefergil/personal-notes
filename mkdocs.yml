@@ -100,6 +100,9 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
+  analytics:
+    provider: google
+    property: G-6S6TNHYVRT
 
 repo_name: diefergil/personal-notes
 repo_url: https://github.com/diefergil/personal-notes
