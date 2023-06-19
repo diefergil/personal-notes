@@ -91,7 +91,15 @@ extra:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/diefergil
     - icon: fontawesome/solid/rss
-      link: https://diefergil.github.io/personal-notes/newsletter/0_newsletter_index
+      link: >-
+        https://diefergil.github.io/personal-notes/newsletter/0_newsletter_index
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
 
 repo_name: diefergil/personal-notes
 repo_url: https://github.com/diefergil/personal-notes
