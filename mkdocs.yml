@@ -25,6 +25,7 @@ plugins:
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "docs.hooks:copy_ads_txt"
+  - tags
 
 markdown_extensions:
   - abbr
@@ -103,6 +104,21 @@ extra:
   analytics:
     provider: google
     property: G-6S6TNHYVRT
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank"
+            rel="noopener">feedback form</a>.
 
 repo_name: diefergil/personal-notes
 repo_url: https://github.com/diefergil/personal-notes

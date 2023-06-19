@@ -1,3 +1,9 @@
+---
+tags:
+  - Python
+  - Tests
+  - Development
+---
 # Pytest
 
 ## Test layouts
