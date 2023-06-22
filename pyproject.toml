@@ -1,12 +1,10 @@
-[tool.poetry]
+[tool.pdm]
 name = "personal-page"
 version = "0.1.0"
 description = ""
 authors = ["Diego <diegofg293@gmail.com>"]
-readme = "README.md"
-packages = [{include = "personal_page"}]
 
-[tool.poetry.dependencies]
+[tool.pdm.dependencies]
 python = "^3.11"
 mkdocs = "^1.4.3"
 proselint = "^0.13.0"
@@ -21,7 +19,19 @@ mkdocs-autolinks-plugin = "^0.7.0"
 mkdocs-exclude-search = "^0.6.5"
 mkdocs-simple-hooks = "^0.1.5"
 
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[project]
+name = "personal-notes"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Diego", email = "diegofg293@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}

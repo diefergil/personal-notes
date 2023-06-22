@@ -146,4 +146,4 @@ if __name__ == '__main__':
 
 Clarifications:
     * When an argument has a action, by default is `False` until you put it in the
-  * call, in this case it is `--sort`argument.
+    call to enable it, in this case it is `--sort`argument.
