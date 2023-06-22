@@ -1,37 +1,37 @@
-[tool.pdm]
-name = "personal-page"
-version = "0.1.0"
-description = ""
-authors = ["Diego <diegofg293@gmail.com>"]
-
-[tool.pdm.dependencies]
-python = "^3.11"
-mkdocs = "^1.4.3"
-proselint = "^0.13.0"
-gitdb2 = "^4.0.2"
-mkdocs-git-revision-date-localized-plugin = "^1.2.0"
-mkdocs-minify-plugin = "^0.6.4"
-mkdocs-material = "^9.1.16"
-mkdocs-section-index = "^0.3.5"
-pymdown-extensions = "^10.0.1"
-mkdocs-newsletter = "^1.0.1"
-mkdocs-autolinks-plugin = "^0.7.0"
-mkdocs-exclude-search = "^0.6.5"
-mkdocs-simple-hooks = "^0.1.5"
-
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
-
-
 [project]
 name = "personal-notes"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Diego", email = "diegofg293@gmail.com"},
+authors = [{ name = "Diego", email = "diegofg293@gmail.com" }]
+dependencies = [
+    "mkdocs==1.4.3",
+    "proselint==0.13.0",
+    "gitdb2==4.0.2",
+    "mkdocs-git-revision-date-localized-plugin>=1.2.0",
+    "mkdocs-minify-plugin>=0.6.4",
+    "mkdocs-material>=9.1.16",
+    "mkdocs-section-index>=0.3.5",
+    "pymdown-extensions>=10.0.1",
+    "mkdocs-newsletter>=1.0.1",
+    "mkdocs-autolinks-plugin>=0.7.0",
+    "mkdocs-exclude-search>=0.6.5",
+    "mkdocs-simple-hooks>=0.1.5",
 ]
-dependencies = []
 requires-python = ">=3.11"
 readme = "README.md"
-license = {text = "MIT"}
+license = { text = "MIT" }
+
+
+[project.urls]
+Homepage = "https://diefergil.github.io/personal-notes/"
+
+[tool]
+[tool.pdm]
+[[tool.pdm.source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
