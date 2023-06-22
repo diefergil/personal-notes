@@ -7,6 +7,10 @@ site_name: My personal notes
 nav:
   - Home: index.md
   - Python:
+      - Environments:
+          - Virtual environments: python/environments.md
+      - Natural language processing:
+          - HuggingFace: python/nlp/huggingface.md
       - Tests:
           - Pytests: python/pytest.md
   - About: about.md
