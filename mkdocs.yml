@@ -7,6 +7,8 @@ site_name: My personal notes
 nav:
   - Home: index.md
   - Python:
+      - CLI's:
+          - Argparse: python/cli/argparse.md
       - Environments:
           - Virtual environments: python/environments.md
       - Natural language processing:
