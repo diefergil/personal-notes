@@ -14,6 +14,8 @@ nav:
           - Virtual environments: python/environments.md
       - Natural language processing:
           - HuggingFace: python/nlp/huggingface.md
+      - Packaging:
+          - Setuptools: python/packaging/setuptools.md
       - Tests:
           - Pytests: python/pytest.md
   - About: about.md

@@ -1,3 +1,8 @@
+---
+tags:
+  - Development
+  - Command Line interface
+---
 # Click Command Line Python Framework Tutorial
 
 Click is a Python package that allows for the creation of beautiful command
