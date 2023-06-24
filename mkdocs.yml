@@ -9,6 +9,7 @@ nav:
   - Python:
       - CLI's:
           - Argparse: python/cli/argparse.md
+          - Click: python/cli/click.md
       - Environments:
           - Virtual environments: python/environments.md
       - Natural language processing:
