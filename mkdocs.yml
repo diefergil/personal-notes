@@ -7,6 +7,10 @@ site_name: My personal notes
 nav:
   - Home: index.md
   - Python:
+      - API's:
+          - Best practices: python/apis/best_practices.md
+          - FastAPI: python/apis/fastapi.md
+          - Flask: python/apis/flask.md
       - CLI's:
           - Argparse: python/cli/argparse.md
           - Click: python/cli/click.md

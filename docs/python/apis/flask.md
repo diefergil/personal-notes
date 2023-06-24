@@ -1,3 +1,8 @@
+---
+tags:
+  - Development
+  - Application Programming Interface
+---
 # Flask
 
 Flask is a web framework for Python, it's lightweight and easy to understand.
@@ -133,3 +138,11 @@ if __name__ == "__main__":
 ```
 
 * `roberta-sequence-classification-9.onnx` The model was donwloaded.
+
+## Send a post
+
+```bash
+curl -X POST --header "Content-Type: application/json"\
+    --data '["using curl is not to my liking"]'\
+    http:/127.0.0.1:5000/predict
+```
