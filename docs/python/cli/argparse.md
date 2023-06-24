@@ -93,7 +93,7 @@ parser.add_argument('--verbose', action='store_true', help='increase output verb
 
 args = parser.parse_args()
 
-print("Processing file:", args.filename)
+print('Processing file:', args.filename)
 if args.verbose:
     print("Verbose mode enabled.")
 ```
