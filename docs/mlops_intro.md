@@ -68,7 +68,7 @@ Although the precise steps may vary depending on the specific ML project, a
 
 MLOps maturity levels can be described in three stages:
 
-### MLOps level 0: Manual process
+###  MLOps level 0: Manual process
 
 ![ ](mlops-maturity-level-0.svg)
 

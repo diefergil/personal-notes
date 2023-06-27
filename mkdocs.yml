@@ -7,7 +7,7 @@ site_name: My personal notes
 nav:
   - Home: index.md
   - Mlops:
-      - Introduction: mlops/mlops_intro.md
+      - Introduction: mlops_intro.md
   - Python:
       - API's:
           - Best practices: python/apis/best_practices.md
