@@ -2,62 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://diefergil.github.io/personal-notes/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/about/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://diefergil.github.io/personal-notes/mlops/mlops_intro/</loc>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/newsletter/0_newsletter_index/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/environments/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/pytest/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/apis/best_practices/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/apis/fastapi/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/apis/flask/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/cli/argparse/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/cli/click/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/nlp/huggingface/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/packaging/setuptools/</loc>
-         <lastmod>2023-06-24</lastmod>
+         <lastmod>2023-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
