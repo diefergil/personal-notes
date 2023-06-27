@@ -18,6 +18,7 @@ repos:
     rev: v0.23.2
     hooks:
       - id: markdownlint
+        args: ["--ignore", "MD019"]
   - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
     rev: v1.1.3
     hooks:

@@ -1,0 +1,26 @@
+/*=-----------------------------------------=*/
+/*= Icons for certain link types: by target =*/
+/*=-----------------------------------------=*/
+
+/*  Within-page (anchor) links.
+    */
+/*
+.md-content section > :not(:first-child) a[href^='#']::after,
+.md-content p a[href^='#']::after {
+    content: "\00B6";
+    margin: 0 1px 0 3px;
+    font-size: 0.75em;
+    vertical-align: baseline;
+    position: relative;
+    bottom: 0.45em;
+    opacity: 0.6;
+}
+.md-content section > :not(:first-child) a[href^='#'].footnote-ref::after,
+.md-content p a[href^='#'].footnote-ref::after,
+.md-content section > :not(:first-child) a[href^='#'].footnote-back::after,
+.md-content p a[href^='#'].footnote-back::after {
+    content: none;
+}
+*/
+/*  Internal (within-site) links. Avoid 'G' icons on hosted documents, local images, and infrastructure, which aren't formal writings.
+ */

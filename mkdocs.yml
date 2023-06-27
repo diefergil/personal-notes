@@ -6,6 +6,8 @@ site_name: My personal notes
 
 nav:
   - Home: index.md
+  - Mlops:
+      - Introduction: mlops/mlops_intro.md
   - Python:
       - API's:
           - Best practices: python/apis/best_practices.md
@@ -39,6 +41,9 @@ plugins:
       hooks:
         on_post_build: "docs.hooks:copy_ads_txt"
   - tags
+  - mermaid2:
+      arguments:
+        securityLevel: loose
 
 markdown_extensions:
   - abbr
@@ -61,7 +66,15 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        # Mermaid diagrams
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - codehilite:
+      guess_lang: false
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -132,6 +145,11 @@ extra:
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank"
             rel="noopener">feedback form</a>.
+
+extra_javascript:
+  - optionalConfig.js
+  - https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js
+  - extra-loader.js
 
 repo_name: diefergil/personal-notes
 repo_url: https://github.com/diefergil/personal-notes

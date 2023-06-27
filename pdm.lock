@@ -105,6 +105,11 @@ requires_python = ">=3.5,<4.0"
 summary = "Dictionary wrapper for quick access to deeply nested keys."
 
 [[package]]
+name = "editorconfig"
+version = "0.12.3"
+summary = "EditorConfig File Locator and Interpreter for Python"
+
+[[package]]
 name = "future"
 version = "0.18.3"
 requires_python = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
@@ -192,6 +197,15 @@ requires_python = ">=3.7"
 summary = "A very fast and expressive template engine."
 dependencies = [
     "MarkupSafe>=2.0",
+]
+
+[[package]]
+name = "jsbeautifier"
+version = "1.14.8"
+summary = "JavaScript unobfuscator and beautifier."
+dependencies = [
+    "editorconfig>=0.12.2",
+    "six>=1.13.0",
 ]
 
 [[package]]
@@ -300,6 +314,22 @@ name = "mkdocs-material-extensions"
 version = "1.1.1"
 requires_python = ">=3.7"
 summary = "Extension pack for Python Markdown and MkDocs Material."
+
+[[package]]
+name = "mkdocs-mermaid2-plugin"
+version = "0.6.0"
+requires_python = ">=3.5"
+summary = "A MkDocs plugin for including mermaid graphs in markdown sources"
+dependencies = [
+    "beautifulsoup4>=4.6.3",
+    "jsbeautifier",
+    "mkdocs-material",
+    "mkdocs>=1.0.4",
+    "pymdown-extensions>=8.0",
+    "pyyaml",
+    "requests",
+    "setuptools>=18.5",
+]
 
 [[package]]
 name = "mkdocs-minify-plugin"
@@ -539,6 +569,12 @@ requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 summary = "Python helper for Semantic Versioning (http://semver.org/)"
 
 [[package]]
+name = "setuptools"
+version = "68.0.0"
+requires_python = ">=3.7"
+summary = "Easily download, build, install, upgrade, and uninstall Python packages"
+
+[[package]]
 name = "six"
 version = "1.16.0"
 requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
@@ -628,7 +664,7 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 lock_version = "4.2"
 cross_platform = true
 groups = ["default"]
-content_hash = "sha256:58186b135c6680a218c23e81a5a715a974ea008d97b8f4b40eefcbc7a7822eb4"
+content_hash = "sha256:73d4e06bd8e4ac29e40401e6c1f7b819551bcbc7972dbe854493a31f653938b4"
 
 [metadata.files]
 "babel 2.12.1" = [
@@ -838,6 +874,10 @@ content_hash = "sha256:58186b135c6680a218c23e81a5a715a974ea008d97b8f4b40eefcbc7a
     {url = "https://files.pythonhosted.org/packages/1a/91/e0d457ee03ec33d79ee2cd8d212debb1bc21dfb99728ae35efdb5832dc22/dotty_dict-1.3.1-py3-none-any.whl", hash = "sha256:5022d234d9922f13aa711b4950372a06a6d64cb6d6db9ba43d0ba133ebfce31f"},
     {url = "https://files.pythonhosted.org/packages/6a/ab/88d67f02024700b48cd8232579ad1316aa9df2272c63049c27cc094229d6/dotty_dict-1.3.1.tar.gz", hash = "sha256:4b016e03b8ae265539757a53eba24b9bfda506fb94fbce0bee843c6f05541a15"},
 ]
+"editorconfig 0.12.3" = [
+    {url = "https://files.pythonhosted.org/packages/13/31/8382c65fb54ef19b8335f8e05e9ed9f62e33122f9619d989a151cc7e5152/EditorConfig-0.12.3.tar.gz", hash = "sha256:57f8ce78afcba15c8b18d46b5170848c88d56fd38f05c2ec60dbbfcb8996e89e"},
+    {url = "https://files.pythonhosted.org/packages/4e/04/e8a79c1db0c55ef03d53c05c61d06c4d6d3be37ef84e5400ce36b4a0fbe9/EditorConfig-0.12.3-py3-none-any.whl", hash = "sha256:6b0851425aa875b08b16789ee0eeadbd4ab59666e9ebe728e526314c4a2e52c1"},
+]
 "future 0.18.3" = [
     {url = "https://files.pythonhosted.org/packages/8f/2e/cf6accf7415237d6faeeebdc7832023c90e0282aa16fd3263db0eb4715ec/future-0.18.3.tar.gz", hash = "sha256:34a17436ed1e96697a86f9de3d15a3b0be01d8bc8de9c1dffd59fb8234ed5307"},
 ]
@@ -883,6 +923,9 @@ content_hash = "sha256:58186b135c6680a218c23e81a5a715a974ea008d97b8f4b40eefcbc7a
 "jinja2 3.1.2" = [
     {url = "https://files.pythonhosted.org/packages/7a/ff/75c28576a1d900e87eb6335b063fab47a8ef3c8b4d88524c4bf78f670cce/Jinja2-3.1.2.tar.gz", hash = "sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"},
     {url = "https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61"},
+]
+"jsbeautifier 1.14.8" = [
+    {url = "https://files.pythonhosted.org/packages/7a/ca/a0c5b01bb0f6a5aa38236023e23ab46fa80bde348b42eabba7f8b3ddc319/jsbeautifier-1.14.8.tar.gz", hash = "sha256:d4c4e263a42dd6194afb9dbe54710be3c5604492cbec3e89c92dd98513f98b9f"},
 ]
 "jsmin 3.0.1" = [
     {url = "https://files.pythonhosted.org/packages/5e/73/e01e4c5e11ad0494f4407a3f623ad4d87714909f50b17a06ed121034ff6e/jsmin-3.0.1.tar.gz", hash = "sha256:c0959a121ef94542e807a674142606f7e90214a2b3d1eb17300244bbb5cc2bfc"},
@@ -974,6 +1017,10 @@ content_hash = "sha256:58186b135c6680a218c23e81a5a715a974ea008d97b8f4b40eefcbc7a
 "mkdocs-material-extensions 1.1.1" = [
     {url = "https://files.pythonhosted.org/packages/cd/3f/e5e3c9bfbb42e4cb661f71bcec787ae6bdf4a161b8c4bb68fd7d991c436c/mkdocs_material_extensions-1.1.1.tar.gz", hash = "sha256:9c003da71e2cc2493d910237448c672e00cefc800d3d6ae93d2fc69979e3bd93"},
     {url = "https://files.pythonhosted.org/packages/fd/c9/35af8ceabace3e33d1fb64b1749c6f4dac6129faa32f8a4229791f89f56a/mkdocs_material_extensions-1.1.1-py3-none-any.whl", hash = "sha256:e41d9f38e4798b6617ad98ca8f7f1157b1e4385ac1459ca1e4ea219b556df945"},
+]
+"mkdocs-mermaid2-plugin 0.6.0" = [
+    {url = "https://files.pythonhosted.org/packages/44/a7/8897aca6e1372eb1581602572525d5ffe7e5cdbcc6423ae68b93cccd3087/mkdocs-mermaid2-plugin-0.6.0.tar.gz", hash = "sha256:99cca6db7c6b4a954a701dcb6b507191bc32a7b0b47eacf2885c1bacf77d1af1"},
+    {url = "https://files.pythonhosted.org/packages/79/ab/c8cfc1cfb2c805d454d6be17daaca8807de85d45e079dcc59ee9c9439b1b/mkdocs_mermaid2_plugin-0.6.0-py3-none-any.whl", hash = "sha256:ffbe8a7daa7ed718cb800c44c5ce4c0ff413caebf7b8b63d9c4a998dfd78a64d"},
 ]
 "mkdocs-minify-plugin 0.6.4" = [
     {url = "https://files.pythonhosted.org/packages/09/b0/ae4e5eb003f1856a7f37780d7cd7fa49998cb042a35902139ed0ace69dc9/mkdocs-minify-plugin-0.6.4.tar.gz", hash = "sha256:1906e9687c39ded7d1ca959c76c6e52da6a8d0765e3981ad9812d3a489f1ecdb"},
@@ -1240,6 +1287,10 @@ content_hash = "sha256:58186b135c6680a218c23e81a5a715a974ea008d97b8f4b40eefcbc7a
 "semver 2.13.0" = [
     {url = "https://files.pythonhosted.org/packages/0b/70/b84f9944a03964a88031ef6ac219b6c91e8ba2f373362329d8770ef36f02/semver-2.13.0-py2.py3-none-any.whl", hash = "sha256:ced8b23dceb22134307c1b8abfa523da14198793d9787ac838e70e29e77458d4"},
     {url = "https://files.pythonhosted.org/packages/31/a9/b61190916030ee9af83de342e101f192bbb436c59be20a4cb0cdb7256ece/semver-2.13.0.tar.gz", hash = "sha256:fa0fe2722ee1c3f57eac478820c3a5ae2f624af8264cbdf9000c980ff7f75e3f"},
+]
+"setuptools 68.0.0" = [
+    {url = "https://files.pythonhosted.org/packages/c7/42/be1c7bbdd83e1bfb160c94b9cafd8e25efc7400346cf7ccdbdb452c467fa/setuptools-68.0.0-py3-none-any.whl", hash = "sha256:11e52c67415a381d10d6b462ced9cfb97066179f0e871399e006c4ab101fc85f"},
+    {url = "https://files.pythonhosted.org/packages/dc/98/5f896af066c128669229ff1aa81553ac14cfb3e5e74b6b44594132b8540e/setuptools-68.0.0.tar.gz", hash = "sha256:baf1fdb41c6da4cd2eae722e135500da913332ab3f2f5c7d33af9b492acb5235"},
 ]
 "six 1.16.0" = [
     {url = "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
