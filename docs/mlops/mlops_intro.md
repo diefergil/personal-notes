@@ -64,97 +64,100 @@ Although the precise steps may vary depending on the specific ML project, a
     performance of the model over time, retraining it as necessary, and
      performing model updates.
 
+##  MLops Hierarchy of needs
+
+![Mlops Hierarchy of Needs](lops-hierarchy-needs.png)
+
+To reach the Mlops level you have to achieve a few steps before you can reach
+ the next level. You cannot, for example, have DataOps without first
+  implementing devops.
+
+You need to achieve one step of the bottom
+
 ## MLOps Maturity Levels
 
-MLOps maturity levels can be described in three stages:
+ there are several different phases of going from a crude working where you can
+  barely get things into production and things are error-prone and manual all
+   the way to a very sophisticated system that has really end-to-end automation
+    and uses the next-generation features.
 
-###  MLOps level 0: Manual process
+1.  _Initial step_: Experimentation. Establish the experimentation environment.
+2.  _Repeatable_: standardize your code, your repos, make sure that there's maybe
+    a platform that you're using that can actually deploy the solution.
+3.  _Reliable_: Test, monitoring, data drift, model versions.
+4.  _Scalable_: You're able to templatize and productionize a lot of different ML
+    solutions, not just one, but actually have a scalable system that you can
+     repeat over and over again
 
-![ ](mlops-maturity-level-0.svg)
+| Level | Description | Highlights | Technology |
+| --- | --- | --- | --- |
+| 0 | No MLOps | <ul><li>Difficult to manage full machine learning model
+ lifecycle</li><li>The teams are disparate and releases are painful</li><li>Most systems exist as "black boxes," little feedback during/post deployment</li><li>Manual builds and deployments</li><li>Manual testing of model and application</li><li>No centralized tracking of model performance</li><li>Training of model is manual</li></ul> |  |
+| 1 | DevOps but no MLOps | <ul><li>Releases are less painful than No MLOps, but rely on Data Team for every new model</li><li>Still limited feedback on how well a model performs in production</li><li>Difficult to trace/reproduce results</li></ul> | <ul><li>Automated builds</li><li>Automated tests for application code</li></ul> |
+| 2 | Automated Training | <ul><li>Training environment is fully managed and traceable</li><li>Easy to reproduce model</li><li>Releases are manual, but low friction</li></ul> | <ul><li>Automated model training</li><li>Centralized tracking of model training performance</li><li>Model management</li></ul> |
+| 3 | Automated Model Deployment | <ul><li>Releases are low friction and automatic</li><li>Full traceability from deployment back to original data</li><li>Entire environment managed: train > test > production</li></ul> | <ul><li>Integrated A/B testing of model performance for deployment</li><li>Automated tests for all code</li><li>Centralized tracking of model training performance</li></ul> |
+| 4 | Full MLOps Automated Operations | <ul><li>Full system automated and easily monitored</li><li>Production systems are providing information on how to improve and, in some cases, automatically improve with new models</li><li>Approaching a zero-downtime system</li></ul> | <ul><li>Automated model training and testing</li><li>Verbose, centralized metrics from deployed model</li></ul> |
 
-### MLOps level 1: ML pipeline automation
+## Level 0: No MLOps
 
-![ ](mlops-maturity-level-1.svg)
+* **People:** Data scientists, data engineers, and software engineers are siloed and not in regular communications.
 
-### Mlops level 2: ML pipeline automation
+* **Model Creation:** Data is gathered manually, compute is likely not managed,
+   experiments aren't predictably tracked, and the end result may be a single
+    model file manually handed off.
+* **Model Release:** The release process is manual, and the scoring script may
+   be manually created well after experiments without version control.
+* **Application Integration:** Heavily reliant on data scientist expertise to
+   implement and manual releases each time.
 
-![Mlops level 2](mlops-maturity-level-2.svg)
+## Level 1: DevOps no MLOps
 
-Many teams have data scientists and ML researchers who can build
- state-of-the-art models, but their process for building and deploying ML
-  models is entirely manual. This is considered the basic level of maturity, or
-   level 0. The following diagram shows the workflow of this process.
+* **People:** Same as Level 0.
 
-1.  **Level 1: Manual**: Processes at this level are largely manual, with models
-    being trained on local machines and predictions made in batch mode.
-2.  **Level 2: Automated**: This level involves automating training and serving
-    pipelines. However, these processes are still treated as separate entities.
-3.  **Level 3: Continuous Integration, Continuous Deployment, and Continuous
-    Training (CI/CD/CT)**: At this level, all processes are fully automated and
-      integrated. Continuous training is used to ensure the model is retrained
-      on new data, and updated models are automatically deployed.
+* **Model Creation:** Data pipeline gathers data automatically, but compute may
+   not be managed, and experiments aren't predictably tracked.
+* **Model Release:** Still a manual process, but the scoring script is likely
+   version controlled and is handed off to software engineers.
+* **Application Integration:** Basic integration tests exist, but still heavily
+   reliant on data scientist expertise. However, releases are automated and application code has unit tests.
 
-##  Basic MLOps architecture
+## Level 2: Automated Training
 
-```mermaid
-graph LR
-    A[Raw Data] -->|Preprocessing| B[Processed Data]
-    B -->|Model Training| C[ML Model]
-    C --> D[Model Deployment]
-    D --> E[Inference Service]
-    E --> F[Monitoring]
-```
+* **People:** Data scientists work directly with data engineers to convert
+   experimentation code into repeatable scripts/jobs, while software engineers
+    remain siloed.
 
-In this basic setup, raw data is processed and used to train a machine learning model.
-The model is then deployed as an inference service, which is monitored to ensure
-it's working correctly.
+* **Model Creation:** Data pipeline gathers data automatically, compute is
+   managed, experiment results are tracked, and both training code and
+ resulting models are version controlled.
+* **Model Release:** Manual release, but the scoring script is version
+   controlled with tests and the release is managed by the software engineering
+    team.
+* **Application Integration:** Same as Level 1.
 
-## Intermediate MLOps architecture
+## Level 3: Automated Model Deployment
 
-```mermaid
-graph LR
-    A[Raw Data] -->|Preprocessing| B[Processed Data]
-    B -->|Model Training| C[ML Model]
-    C -->|Validation| D[Validated Model]
-    D --> E[Model Deployment]
-    E --> F[Inference Service]
-    F --> G[Monitoring]
-    G -->|Feedback| H[Model Retraining]
-    H --> C
-```
+* **People:** Data scientists and data engineers work together and also with
+   software engineers to manage inputs/outputs and automate model integration
+    into application code.
 
-In an intermediate setup, the model is validated before deployment. There's
- also a feedback loop from monitoring to model retraining, allowing the model
-  to be improved
-over time based on its performance in the real world.
+* **Model Creation:** Same as Level 2.
+* **Model Release:** Release is automatic and managed by a continuous delivery
+   (CI/CD) pipeline.
+* **Application Integration:** Unit and integration tests exist for each model
+   release, and the process is less reliant on data scientist expertise.
+    Application code has unit/integration tests..
 
-##  Advanced MLOps architecture
+## Level 4: Full MLOps Automated Retraining
 
-```mermaid
-graph LR
-    A[Raw Data] -->|Preprocessing| B[Processed Data]
-    B -->|Model Training| C[ML Model]
-    C -->|Validation| D[Validated Model]
-    D --> E[Model Deployment]
-    E --> F[Inference Service]
-    F --> G[Monitoring]
-    G -->|Feedback| H[Model Retraining]
-    H --> C
-    I[Business Rules] --> J[Model Governance]
-    J --> E
-    K[Data Versioning] --> B
-    L[Model Versioning] --> C
-```
+* **People:** All roles work together, with software engineers implementing
+   post-deployment metrics gathering.
 
-In an advanced setup, there are additional components for model governance (which
-applies business rules to the models), data versioning (which keeps track of changes
-to the data over time), and model versioning (which keeps track of changes to the
-models over time).
-
-Remember, these are simplified examples and actual MLOps architectures can be much
-more complex. They can also vary widely depending on the specific needs and
-constraints of the organization, the project, and the data.
+* **Model Creation:** Similar to Level 3, but retraining is triggered
+   automatically based on production metrics.
+* **Model Release:** Same as Level 3.
 
 #  References
 
 * [Google Mlops levels](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+* [Microsoft Mlops levels](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlops-maturity-model#level-0-no-mlops)
