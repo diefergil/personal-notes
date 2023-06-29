@@ -66,7 +66,7 @@ Although the precise steps may vary depending on the specific ML project, a
 
 ##  MLops Hierarchy of needs
 
-![Mlops Hierarchy of Needs](lops-hierarchy-needs.png)
+![Mlops Hierarchy of Needs](mlops-hierarchy-needs.png)
 
 To reach the Mlops level you have to achieve a few steps before you can reach
  the next level. You cannot, for example, have DataOps without first
@@ -91,8 +91,7 @@ You need to achieve one step of the bottom
 
 | Level | Description | Highlights | Technology |
 | --- | --- | --- | --- |
-| 0 | No MLOps | <ul><li>Difficult to manage full machine learning model
- lifecycle</li><li>The teams are disparate and releases are painful</li><li>Most systems exist as "black boxes," little feedback during/post deployment</li><li>Manual builds and deployments</li><li>Manual testing of model and application</li><li>No centralized tracking of model performance</li><li>Training of model is manual</li></ul> |  |
+| 0 | No MLOps | <ul><li>Difficult to manage full machine learning model lifecycle</li><li>The teams are disparate and releases are painful</li><li>Most systems exist as "black boxes," little feedback during/post deployment</li><li>Manual builds and deployments</li><li>Manual testing of model and application</li><li>No centralized tracking of model performance</li><li>Training of model is manual</li></ul> |  |
 | 1 | DevOps but no MLOps | <ul><li>Releases are less painful than No MLOps, but rely on Data Team for every new model</li><li>Still limited feedback on how well a model performs in production</li><li>Difficult to trace/reproduce results</li></ul> | <ul><li>Automated builds</li><li>Automated tests for application code</li></ul> |
 | 2 | Automated Training | <ul><li>Training environment is fully managed and traceable</li><li>Easy to reproduce model</li><li>Releases are manual, but low friction</li></ul> | <ul><li>Automated model training</li><li>Centralized tracking of model training performance</li><li>Model management</li></ul> |
 | 3 | Automated Model Deployment | <ul><li>Releases are low friction and automatic</li><li>Full traceability from deployment back to original data</li><li>Entire environment managed: train > test > production</li></ul> | <ul><li>Integrated A/B testing of model performance for deployment</li><li>Automated tests for all code</li><li>Centralized tracking of model training performance</li></ul> |
@@ -100,7 +99,8 @@ You need to achieve one step of the bottom
 
 ## Level 0: No MLOps
 
-* **People:** Data scientists, data engineers, and software engineers are siloed and not in regular communications.
+* **People:** Data scientists, data engineers, and software engineers are
+   siloed and not in regular communications.
 
 * **Model Creation:** Data is gathered manually, compute is likely not managed,
    experiments aren't predictably tracked, and the end result may be a single
@@ -119,7 +119,8 @@ You need to achieve one step of the bottom
 * **Model Release:** Still a manual process, but the scoring script is likely
    version controlled and is handed off to software engineers.
 * **Application Integration:** Basic integration tests exist, but still heavily
-   reliant on data scientist expertise. However, releases are automated and application code has unit tests.
+   reliant on data scientist expertise. However, releases are automated and
+    application code has unit tests.
 
 ## Level 2: Automated Training
 
