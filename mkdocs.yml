@@ -8,6 +8,10 @@ nav:
   - Home: index.md
   - Mlops:
       - Introduction: mlops/mlops_intro.md
+      - Continous integration: mlops/continous_delivery.md
+      - Tools:
+          - Github actions: mlops/tools/github_actions.md
+          - Makefile: mlops/tools/makefile.md
   - Python:
       - API's:
           - Best practices: python/apis/best_practices.md
@@ -33,6 +37,10 @@ plugins:
   - autolinks
   - git-revision-date-localized:
       type: timeago
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
+      strict: false
   - minify:
       minify_html: true
   - section-index
@@ -47,6 +55,7 @@ plugins:
 
 markdown_extensions:
   - abbr
+  - attr_list
   - admonition
   - meta
   - def_list
@@ -60,10 +69,15 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: "!!python/name:pymdownx.emoji.to_svg"
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences:
@@ -91,6 +105,8 @@ theme:
     - content.code.annotate
     - search.suggest
     - search.highlight
+    - content.code.copy
+    - content.code.select
 
   palette:
     # Light mode
