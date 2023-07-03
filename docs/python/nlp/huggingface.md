@@ -28,19 +28,19 @@ and JAX. This provides the flexibility to use a different framework at each stag
 
 [Installation](https://huggingface.co/docs/transformers/installation)
 
-=== 'Normal instalation'
+=== "Normal instalation"
 
     ```bash
     pip install transformers
     ```
 
-=== 'pytorch'
+=== "pytorch"
 
     ```bash
     pip install 'transformers[torch]'
     ```
 
-=== 'tensorflow'
+=== "tensorflow"
 
     ```bash
     pip install 'transformers[tf-cpu]'

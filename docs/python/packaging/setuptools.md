@@ -99,13 +99,13 @@ This command installs the package in the current directory. If you want to insta
  the package in editable mode (i.e., changes to the source code are immediately
  available without needing to reinstall the package), you can use:
 
-=== 'Pip'
+=== "Pip"
 
     ```bash
     pip install -e .
     ```
 
-=== 'Pyhton'
+=== "Pyhton"
 
     ```bash
     python setup.py develop
