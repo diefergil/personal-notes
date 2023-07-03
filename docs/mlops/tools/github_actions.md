@@ -9,6 +9,7 @@ In this guide, we'll go through the steps to create a continuous integration
  (CI) workflow for a Python package using GitHub Actions. This will
   automatically test your Python package each time you push a commit to your repository.
 
+```bash
 .
 ├── .github
 │   ├── workflows
@@ -16,7 +17,7 @@ In this guide, we'll go through the steps to create a continuous integration
 ├── Makefile
 ├── README.md
 ├── src
-
+```
 ## Step 1: Create a Workflow File
 
 In your GitHub repository, create a new file in the `.github/workflows`

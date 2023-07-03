@@ -28,7 +28,7 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run()
 ```
 
@@ -39,7 +39,7 @@ Here's what this code does:
 * `@app.route('/')` is a decorator that tells Flask what URL should trigger the
   function that follows.
 * `def hello_world():` defines a function that returns the string 'Hello, World!'
-* `if __name__ == "__main__": app.run()` runs the application on the local
+* `if __name__ == '__main__': app.run()` runs the application on the local
   development server.
 
 To run the application, save the above code in a file called app.py, then run
@@ -56,7 +56,7 @@ python app.py
 ```
 
 Then, open your web browser and navigate to `http://127.0.0.1:5000/`. You should
-see the text "Hello, World!" displayed.
+see the text 'Hello, World!' displayed.
 
 ## Add more routes
 
@@ -70,7 +70,7 @@ def about():
 ```
 
 Now, if you navigate to `http://127.0.0.1:5000/about`, you will see the text
-"About Page".
+'About Page'.
 
 ## Script example
 
@@ -87,7 +87,7 @@ def hello_world():
 def error():
     abort(500, 'oooh some error!')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True, port=8000, host='0.0.0.0')
 ```
 
@@ -102,8 +102,8 @@ import onnxruntime
 
 
 app = Flask(__name__)
-tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
-session = onnxruntime.InferenceSession("roberta-sequence-classification-9.onnx")
+tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
+session = onnxruntime.InferenceSession('roberta-sequence-classification-9.onnx')
 
 
 def to_numpy(tensor):
@@ -112,12 +112,12 @@ def to_numpy(tensor):
     )
 
 
-@app.route("/")
+@app.route('/')
 def home():
-    return "<h2>RoBERTa sentiment analysis</h2>"
+    return '<h2>RoBERTa sentiment analysis</h2>'
 
 
-@app.route("/predict", methods=["POST"])
+@app.route('/predict', methods=['POST'])
 def predict():
     input_ids = torch.tensor(
         tokenizer.encode(request.json[0], add_special_tokens=True)
@@ -130,11 +130,11 @@ def predict():
 
     result = np.argmax(out)
 
-    return jsonify({"positive": bool(result)})
+    return jsonify({'positive': bool(result)})
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
 ```
 
 * `roberta-sequence-classification-9.onnx` The model was donwloaded.
@@ -142,7 +142,7 @@ if __name__ == "__main__":
 ## Send a post
 
 ```bash
-curl -X POST --header "Content-Type: application/json"\
-    --data '["using curl is not to my liking"]'\
+curl -X POST --header 'Content-Type: application/json'\
+    --data '['using curl is not to my liking']'\
     http:/127.0.0.1:5000/predict
 ```

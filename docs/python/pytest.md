@@ -30,20 +30,20 @@ def test_my_function():
 
 Classes do not need inheritance:
 
-<a id="str_to_int-function"></a>
+<a id='str_to_int-function'></a>
 
 ```python
 # This function is here for convenience only, in a real-world scenario this function
 # would be elsewhere in a package
 
 def str_to_int(string):
-    """
+    '''
     Parses a string number into an integer, optionally converting to a float
     and rounding down.
-    You can pass "1.1" which returns 1
-    ["1"] -> raises RuntimeError
-    """
-    error_msg = "Unable to convert to integer: '%s'" % str(string)
+    You can pass '1.1' which returns 1
+    ['1'] -> raises RuntimeError
+    '''
+    error_msg = 'Unable to convert to integer: '%s'' % str(string)
     try:
         integer = float(string.replace(',', '.'))
     except AttributeError:
@@ -207,9 +207,8 @@ Once entered in the debugger you can type `h` to see the commands that you can u
 
 ## Another commands for pytest
 
- - `--collect-only` -> Only collect tests, don't execute them
- - `-x` -> Stop at the first failure
-
+* `--collect-only` -> Only collect tests, don't execute them
+* `-x` -> Stop at the first failure
 
 To see all type:
 
@@ -231,7 +230,6 @@ pytest -n 4 test/
 
 Going to set 4 differents runner instances and run them at the same time.
 
-
 ## Other functionalities
 
 ### Parametrize tests
@@ -246,12 +244,12 @@ Parametrize tests it's like put a for loop over the tests that you want to expec
   <summary>str_to_bool function:</summary>
   ```python
     def str_to_bool(val):
-      """
+      '''
       Convert a string representation of truth to True or False
       True values are 'y', 'yes', or ''; case-insensitive
       False values are 'n', or 'no'; case-insensitive
       Raises ValueError if 'val' is anything else.
-      """
+      '''
       true_vals = ['yes', 'y', '']
       false_vals = ['no', 'n']
       try:
@@ -263,7 +261,7 @@ Parametrize tests it's like put a for loop over the tests that you want to expec
       elif val in false_vals:
           return False
       else:
-          raise ValueError("Invalid input value: %s" % val)
+          raise ValueError('Invalid input value: %s' % val)
   ```
 </details>
 
@@ -291,6 +289,7 @@ def test_is_true(value):
 
   ======================================== 3 passed in 0.01s ========================================
   ```
+
 </details>
 
 ### Fixtures
@@ -308,15 +307,15 @@ import pytest
 # Define a fixture
 @pytest.fixture
 def my_fixture():
-    return "Hello, World!"
+    return 'Hello, World!'
 
 # Use the fixture in a test
 def test_hello(my_fixture):
-    assert my_fixture == "Hello, World!"
+    assert my_fixture == 'Hello, World!'
 ```
 
 In this example, the `my_fixture` fixture is defined to return the string
-`"Hello, World!"`. Then, in the `test_hello` test, `my_fixture` is injected as
+`'Hello, World!'`. Then, in the `test_hello` test, `my_fixture` is injected as
 an argument. When pytest runs this test, it first calls the my_fixture fixture
 function and then passes its return value to `test_hello`.
 
@@ -342,38 +341,40 @@ The setup_database function is called to establish the connection, and then the
 connection object is yielded to the test. After the test runs, the `teardown_database`
 function is called to clean up the connection.
 
-
 #### fixture scopes
 
-Fixture scope determines when a fixture is set up and torn down. The possible scopes are function, class, module, package or session:
+Fixture scope determines when a fixture is set up and torn down. The possible
+ scopes are function, class, module, package or session:
 
-* `function`: The default scope, the fixture is set up and torn down for each test function.
+* `function`: The default scope, the fixture is set up and torn down for each
+   test function.
 * `class`: The fixture is set up and torn down for each test class.
 * `module`: The fixture is set up and torn down once per test module.
 * `package`: The fixture is set up and torn down once per test package.
-* `session`: The fixture is set up once when the test session starts, and is torn down once at the end of the test session.
+* `session`: The fixture is set up once when the test session starts, and is
+   torn down once at the end of the test session.
 
 ```python
 import pytest
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope='module')
 def module_fixture():
     # Setup code here
-    yield "Hello, Module!"
+    yield 'Hello, Module!'
     # Teardown code here
 ```
 
-#### Fixture dependencies
+####  Fixture dependencies
 
-Fixtures can use other fixtures. This is often useful when you want to modularize your
-fixtures for reuse and better organization.
+Fixtures can use other fixtures. This is often useful when you want to
+ modularize your fixtures for reuse and better organization.
 
 ```python
 import pytest
 
 @pytest.fixture
 def order():
-    return {"name": "Burger", "price": 7.99}
+    return {'name': 'Burger', 'price': 7.99}
 
 @pytest.fixture
 def cart(order):
@@ -395,7 +396,7 @@ import pytest
 
 @pytest.fixture
 def my_fixture():
-    return "Available Everywhere"
+    return 'Available Everywhere'
 ```
 
 ### temporal directories
@@ -407,12 +408,12 @@ unique to the test invocation, which is automatically cleaned up after the test.
 class TestMyClass:
 
     def test_write_Yes(self, tmpdir):
-        path = str(tmpdir.join("test_value"))
-        write_integer("Yes", path)
-        with open(path, "r") as _f:
+        path = str(tmpdir.join('test_value'))
+        write_integer('Yes', path)
+        with open(path, 'r') as _f:
             value = _f.read()
 
-        assert value == "True"
+        assert value == 'True'
 ```
 
 ### Monkeypatch
@@ -422,7 +423,7 @@ dictionary item or environment variable or to modify sys.path for importing.
 
 ```python
 def test_monkeypatch(monkeypatch):
-    result = {"HELLO": "world"}
-    monkeypatch.setenv("HELLO", "monkeypatched")
-    assert result["HELLO"] == "monkeypatched"
+    result = {'HELLO': 'world'}
+    monkeypatch.setenv('HELLO', 'monkeypatched')
+    assert result['HELLO'] == 'monkeypatched'
 ```

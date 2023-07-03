@@ -95,7 +95,7 @@ args = parser.parse_args()
 
 print('Processing file:', args.filename)
 if args.verbose:
-    print("Verbose mode enabled.")
+    print('Verbose mode enabled.')
 ```
 
 ssuming this script is saved as `script.py`, you can run it from the command line

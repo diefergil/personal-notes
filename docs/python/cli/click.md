@@ -177,7 +177,7 @@ python myscript.py showfile /path/to/file
 
 ## Argument vs Option
 
-In the context of command-line interfaces, the terms "argument" and "option" have
+In the context of command-line interfaces, the terms 'argument' and 'option' have
 specific meanings:
 
 * _Argument_: An argument is a value that is passed directly to a command. Arguments
@@ -209,7 +209,7 @@ Here's an example of a command in Click that uses both arguments and options:
 @click.argument('filename')
 @click.option('--verbose', is_flag=True, help='Enable verbose mode.')
 def process(filename, verbose):
-    """Process a file. If --verbose is provided, print detailed information."""
+    '''Process a file. If --verbose is provided, print detailed information.'''
     if verbose:
         click.echo(f'Processing file in verbose mode: {filename}')
     else:
@@ -239,16 +239,16 @@ import click
 
 @click.group()
 def group1():
-    """This is group1 commands."""
+    '''This is group1 commands.'''
     pass
 
 @group1.command()
 def command1():
-    click.echo("Executing command1 from group1.")
+    click.echo('Executing command1 from group1.')
 
 @group1.command()
 def command2():
-    click.echo("Executing command2 from group1.")
+    click.echo('Executing command2 from group1.')
 ```
 
 `file2.py`:
@@ -258,16 +258,16 @@ import click
 
 @click.group()
 def group2():
-    """This is group2 commands."""
+    '''This is group2 commands.'''
     pass
 
 @group2.command()
 def command1():
-    click.echo("Executing command1 from group2.")
+    click.echo('Executing command1 from group2.')
 
 @group2.command()
 def command2():
-    click.echo("Executing command2 from group2.")
+    click.echo('Executing command2 from group2.')
 ```
 
 You can then create an entry point in a main file (for example, main.py) that imports
@@ -282,7 +282,7 @@ from file2 import group2
 
 @click.group()
 def cli():
-    """This is the main entry point."""
+    '''This is the main entry point.'''
     pass
 
 cli.add_command(group1)

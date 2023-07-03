@@ -92,7 +92,7 @@ By defining the dependencies accurately in your Makefile, you ensure that your
 ## Using the `.PHONY` Target
 
 In a Makefile, the `.PHONY` target is used to declare rules that do not
- correspond to actual files. These rules are considered "phony" because they
+ correspond to actual files. These rules are considered 'phony' because they
   don't generate any output files with the same name. Instead, they execute a
    series of commands or actions.
 
@@ -143,7 +143,7 @@ rule:
 ```
 
 In this example, the `MY_VARIABLE` environment variable is defined with the
- value `"my_value"`. The `rule` target then uses the `echo` command to display
+ value `'my_value'`. The `rule` target then uses the `echo` command to display
   the value of `MY_VARIABLE`.
 
 Including a `.venv` File
@@ -304,7 +304,7 @@ test_benchmark:
 
 init:
     poetry install
-    poetry run ipython kernel install --name "my_kernel_name" --user
+    poetry run ipython kernel install --name 'my_kernel_name' --user
     dvc pull
 ```
 

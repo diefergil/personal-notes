@@ -41,11 +41,11 @@ setup(
     packages=find_packages(),
     description='A sample Python package',
     # you cand add this using a function from the requierements.txt
-    install_requires = ["click==7.3.0", "colorama"],
-    entry_points="""
+    install_requires = ['click==7.3.0', 'colorama'],
+    entry_points='''
     [console_scripts]
     command1=src.main:command1
-    """
+    '''
     long_description=open('README.txt').read(),
     author='Your Name',
     author_email='your.email@example.com',
@@ -99,13 +99,13 @@ This command installs the package in the current directory. If you want to insta
  the package in editable mode (i.e., changes to the source code are immediately
  available without needing to reinstall the package), you can use:
 
-=== "Pip"
+=== 'Pip'
 
     ```bash
     pip install -e .
     ```
 
-=== "Pyhton"
+=== 'Pyhton'
 
     ```bash
     python setup.py develop

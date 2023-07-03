@@ -6,10 +6,16 @@ site_name: My personal notes
 
 nav:
   - Home: index.md
+  - Cloud:
+      - AWS:
+          - App Runner: cloud/aws/app_runner.md
+      - Google Cloud:
+          - App Engine: cloud/google/app_engine.md
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
       - Tools:
+          - Docker: mlops/tools/docker_file.md
           - Github actions: mlops/tools/github_actions.md
           - Makefile: mlops/tools/makefile.md
   - Python:

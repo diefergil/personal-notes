@@ -27,9 +27,9 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/")
+@app.get('/')
 def read_root():
-    return {"Hello": "World"}
+    return {'Hello': 'World'}
 ```
 
 You can run the application using Uvicorn:
@@ -41,22 +41,20 @@ uvicorn main:app --reload
 This command refers to:
 
 * `uvicorn`: Python framework that allows us to run a python application.
-* `main`: the file main.py (the Python "module").
+* `main`: the file main.py (the Python 'module').
 * `app`: the object created inside of main.py with the line app = FastAPI().
 * `--reload`: make the server restart after code changes. Only do this for development.
 
 ## Path parameters
 
-You can define path parameters by putting them in curly braces {} in the path of the
- route decorator:
-
-You can define path parameters by putting them in curly braces {} in the path of the
+You can define path parameters by putting them in curly braces {} in the path
+ of the
  route decorator:
 
 ```python
-@app.get("/items/{item_id}")
+@app.get('/items/{item_id}')
 def read_item(item_id: int):
-    return {"item_id": item_id}
+    return {'item_id': item_id}
 ```
 
 ## Query Parameters
@@ -67,11 +65,11 @@ If you want the client to send additional data, but not in the path, you can use
 ```python
 from typing import Optional
 
-@app.get("/items/")
+@app.get('/items/')
 def read_items(q: Optional[str] = None):
     if q:
-        return {"item": q}
-    return {"item": "not found"}
+        return {'item': q}
+    return {'item': 'not found'}
 ```
 
 In this case, `q` is an optional string query parameter.
@@ -91,7 +89,7 @@ class Item(BaseModel):
     price: float
     tax: Optional[float] = None
 
-@app.post("/items/")
+@app.post('/items/')
 def create_item(item: Item):
     return item
 ```
@@ -109,10 +107,10 @@ from fastapi.staticfiles import StaticFiles # for serving static files
 from pydantic import BaseModel
 
 current_dir = dirname(abspath(__file__)) # get the path of the current script
-static_path = join(current_dir, "static") # 
+static_path = join(current_dir, 'static') 
 
 app = FastAPI()
-app.mount("/ui", StaticFiles(directory=static_path), name="ui")
+app.mount('/ui', StaticFiles(directory=static_path), name='ui')
 
 class Body(BaseModel):
     strftime: str
@@ -120,24 +118,24 @@ class Body(BaseModel):
 
 @app.get('/')
 def root():
-    html_path = join(static_path, "index.html")
+    html_path = join(static_path, 'index.html')
     return FileResponse(html_path)
 
 
 @app.post('/generate')
 def generate(body: Body):
-    """
+    '''
     Generate the current time given a strftime template. For example:
     '%Y-%m-%dT%H:%M:%S.%f'
-    """
+    '''
     tmpl = body.strftime or '%Y-%m-%dT%H:%M:%S.%f'
     return {'date': datetime.now().strftime(tmpl)}
 
 @app.post('/azure_cognitive')
 def azure_cognitive(body: Body):
-    """
+    '''
     Put here your code to create an Azure Cognitive service endpoint!
-    """
+    '''
     return {'result': None} # Change None
 ```
 

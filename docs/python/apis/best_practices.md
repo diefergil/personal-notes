@@ -26,9 +26,9 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/items/{item_id}")
+@app.get('/items/{item_id}')
 async def read_item(item_id: int):
-    return {"item_id": item_id}
+    return {'item_id': item_id}
 ```
 
 In the above example, the OpenAPI schema is automatically generated and can be
@@ -41,11 +41,11 @@ using the correct HTTP methods (GET, POST, PUT, DELETE, etc.) and having meaning
 predictable URLs. FastAPI makes it easy to define these with Python decorators.
 
 ```python
-@app.get("/users/{user_id}")
+@app.get('/users/{user_id}')
 async def read_user(user_id: int):
     # code to get user
 
-@app.post("/users/")
+@app.post('/users/')
 async def create_user(user: User):
     # code to create user
 ```
@@ -79,7 +79,7 @@ class Item(BaseModel):
     price: float
     tax: float = None
 
-@app.post("/items/")
+@app.post('/items/')
 async def create_item(item: Item):
     # code to create item
 ```
@@ -96,11 +96,11 @@ code and message.
 ```python
 from fastapi import HTTPException
 
-@app.get("/items/{item_id}")
+@app.get('/items/{item_id}')
 async def read_item(item_id: int):
     item = get_item(item_id)
     if not item:
-        raise HTTPException(status_code=404, detail="Item not found")
+        raise HTTPException(status_code=404, detail='Item not found')
     return item
 ```
 
@@ -117,7 +117,9 @@ async def read_item(item_id: int):
 
 ##  5. Rate Limiting
 
-Protect your API from abuse and overuse by implementing rate limiting. While FastAPI doesn't have built-in support for rate limiting, you can use third-party libraries such as SlowApi.
+Protect your API from abuse and overuse by implementing rate limiting. While
+ FastAPI doesn't have built-in support for rate limiting, you can use
+  third-party libraries such as SlowApi.
 
 ##  6. Use Asynchronous Code
 
@@ -127,11 +129,13 @@ other requests while waiting for IO-bound tasks (like database queries) to
 complete.
 
 ```python
-@app.get("/items/")
+@app.get('/items/')
 async def read_items():
-    items = await get_all_items()  # an async function that gets all items from the database
+    items = await get_all_items()  # (1)
     return items
 ```
+
+1. An async function that gets all items from the database
 
 ##  7. Logging and Monitoring
 
@@ -139,19 +143,19 @@ An essential aspect of maintaining and troubleshooting APIs is having robust log
 and monitoring in place. Here are some best practices for logging and monitoring
 in FastAPI:
 
-1.  Use the standard library logging module: The logging module is a built-in Python
-    library that provides a flexible and powerful way to log messages from your
-    application. FastAPI has built-in support for the logging module, so you can easily
-    integrate it into your application​1​.
+1.  Use the standard library logging module: The logging module is a built-in
+   Python library that provides a flexible and powerful way to log messages from
+   your application. FastAPI has built-in support for the logging module, so
+   you can easily integrate it into your application​1​.
 
     ```python
     import logging
 
     logger = logging.getLogger(__name__)
 
-    @app.post("/items/")
+    @app.post('/items/')
     async def create_item(item: Item):
-        logger.info(f"Creating item: {item.name}")
+        logger.info(f'Creating item: {item.name}')
         # code to create item
     ```
 

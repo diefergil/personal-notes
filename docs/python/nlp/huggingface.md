@@ -28,19 +28,19 @@ and JAX. This provides the flexibility to use a different framework at each stag
 
 [Installation](https://huggingface.co/docs/transformers/installation)
 
-=== "Normal instalation"
+=== 'Normal instalation'
 
     ```bash
     pip install transformers
     ```
 
-=== "pytorch"
+=== 'pytorch'
 
     ```bash
     pip install 'transformers[torch]'
     ```
 
-=== "tensorflow"
+=== 'tensorflow'
 
     ```bash
     pip install 'transformers[tf-cpu]'
@@ -77,9 +77,9 @@ from datasets import load_dataset, list_datasets
 available = list_datasets()
 
 # load the dataset dynamically
-movie_rationales = load_dataset("movie_rationales)
+movie_rationales = load_dataset('movie_rationales)
 
 # the object is a dict-like mapping of actual datasets
-train = movie_rationales["train]
+train = movie_rationales['train]
 df = train.to_pandas()
 ```
