@@ -230,6 +230,31 @@ pytest -n 4 test/
 
 Going to set 4 differents runner instances and run them at the same time.
 
+### nbval
+
+The plugin adds functionality to py.test to recognise and collect Jupyter
+ notebooks. The intended purpose of the tests is to determine whether execution
+  of the stored inputs match the stored outputs of the .ipynb file. Whilst also
+   ensuring that the notebooks are running without errors.
+
+The tests were designed to ensure that Jupyter notebooks (especially those for
+ reference and documentation), are executing consistently.
+
+Each cell is taken as a test, a cell that doesn't reproduce the expected output
+ will fail.
+
+#### Installation
+
+```bash
+pip install nbval
+```
+
+#### Usage
+
+```bash
+python -m pyest -nbval notebooks/
+```
+
 ## Other functionalities
 
 ### Parametrize tests
