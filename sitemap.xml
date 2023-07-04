@@ -11,12 +11,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://diefergil.github.io/personal-notes/hooks/</loc>
+         <lastmod>2023-07-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/aws/app_runner/</loc>
          <lastmod>2023-07-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/google/app_engine/</loc>
+         <lastmod>2023-07-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://diefergil.github.io/personal-notes/data_science/statistics/intro/</loc>
          <lastmod>2023-07-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
