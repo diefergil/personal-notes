@@ -11,6 +11,9 @@ nav:
           - App Runner: cloud/aws/app_runner.md
       - Google Cloud:
           - App Engine: cloud/google/app_engine.md
+  - Data Science:
+      - Statistics:
+          - Introduction: data_science/statistics/intro.ipynb
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
@@ -58,6 +61,10 @@ plugins:
   - mermaid2:
       arguments:
         securityLevel: loose
+  - mkdocs-jupyter:
+      execute: false
+      allow_errors: false
+      show_input: True
 
 markdown_extensions:
   - abbr

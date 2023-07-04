@@ -9,7 +9,7 @@ tags:
 you have created. It's the build script for setuptools. It tells setuptools about
 your package (such as the name and version) as well as files to include.
 
-## Creating a Basic `setup.py` File
+##  Creating a Basic `setup.py` File
 
 Here's an example of a basic setup.py file:
 

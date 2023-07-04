@@ -252,7 +252,7 @@ pip install nbval
 #### Usage
 
 ```bash
-python -m pyest -nbval notebooks/
+python -m pytest --nbval notebooks/
 ```
 
 ## Other functionalities

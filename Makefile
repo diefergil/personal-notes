@@ -75,3 +75,7 @@ build-newsletters:
 	pdm run mkdocs build
 
 	@echo ""
+
+.PHONY: tests
+tests:
+	pdm run python -m pytest --nbval docs/
