@@ -664,7 +664,7 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 lock_version = "4.2"
 cross_platform = true
 groups = ["default"]
-content_hash = "sha256:73d4e06bd8e4ac29e40401e6c1f7b819551bcbc7972dbe854493a31f653938b4"
+content_hash = "sha256:a7a2ab10350dd9acfdb6695238e0b0f12c5fd2e883ed10d2a3468ec003101c64"
 
 [metadata.files]
 "babel 2.12.1" = [
