@@ -17,8 +17,6 @@ RUN apt-get update \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
-# Make a new directory to put our code in
-RUN mkdir /code
 
 # Change the working directory
 WORKDIR /code
@@ -29,8 +27,8 @@ COPY . /code
 # Install PDM
 RUN pip install pdm
 
-# Use PDM to install your-package
-RUN make install
+# Use PDM to install dependencies
+RUN pdm sync
 
 # Default command to start bash
 CMD ["/bin/bash"]

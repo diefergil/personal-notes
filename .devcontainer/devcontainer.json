@@ -37,7 +37,5 @@
 	// Forward jupyter lab/notebook port
 	"forwardPorts": [
 		8000
-	],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pdm install"
+	]
 }
