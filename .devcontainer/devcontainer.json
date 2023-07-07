@@ -19,14 +19,6 @@
 			"version": "3.11"
 		}
 	},
-
-	// Creates a file in .devcontainer directory containing the host docker group GID.
-	// This is required to use docker with a non-root user inside the container.
-	"initializeCommand": ".devcontainer/scripts/initialize.sh",
-
-	// Actions to run after the container creation
-	"postCreateCommand": "post-create.sh",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
