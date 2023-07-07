@@ -5,10 +5,18 @@
 	"build": {
 		// Sets the run context to the .devcontainer folder.
 		"context": "..",
-		"dockerfile": "Dockerfile",
+		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+		"dockerfile": "../Dockerfile",
 		"args": {
-			// Workaround for new Docker version bug: https://github.com/microsoft/vscode-remote-release/issues/7958#issuecomment-1416777679
+			// Workaround for new Docker version bug: https://github.com/microsoft/vscode-remote-release/issues/7958#issuecomme../nt-1416777679
 			"BUILDKIT_INLINE_CACHE": "0"
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": true,
+			"optimize": true,
+			"version": "3.11"
 		}
 	},
 
@@ -33,25 +41,6 @@
 			]
 		}
 	},
-
-	// Workspace
-	"workspaceMount": "source=${localWorkspaceFolder}/,target=/workspaces/code/,type=bind,consistency=cached",
-	"workspaceFolder": "/code",
-
-	// Mount local directories
-	"mounts": [
-		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind",
-		"source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind",
-		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
-		"source=${localWorkspaceFolder}/.devcontainer/environment,target=/environment,type=bind",
-		"source=${localWorkspaceFolder}/.devcontainer/scripts,target=/scripts,type=bind",
-		// Workaround so the local .venv is not overwritten
-		"type=volume,source=devcontainer-code-venv,target=/workspaces/code/.venv"
-	],
-
-
-	// Use the vscode user inside the container
-	"remoteUser": "vscode",
 
 	// Forward jupyter lab/notebook port
 	"forwardPorts": [
