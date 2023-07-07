@@ -27,6 +27,9 @@ COPY . /code
 # Install PDM
 RUN pip install pdm
 
+# Install pre-commit
+RUN pip install pre-commit
+
 # Use PDM to install dependencies
 RUN pdm sync
 

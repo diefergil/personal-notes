@@ -39,5 +39,5 @@
 		8000
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pdm install"
+	"postCreateCommand": "pdm install && pre-commit install"
 }
