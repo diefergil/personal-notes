@@ -46,14 +46,14 @@ plugins:
   - autolinks
   - git-revision-date-localized:
       type: timeago
-      fallback_to_build_date: false
+      fallback_to_build_date: true
       enable_creation_date: true
       enabled: true
       strict: false
   - minify:
       minify_html: true
   - section-index
-  - mkdocs-newsletter
+  # - mkdocs-newsletter TODO: check if it works & the problem with git in docker
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "docs.hooks:copy_ads_txt"
