@@ -1,0 +1,60 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "personal-notes-devcontainer",
+	"build": {
+		// Sets the run context to the .devcontainer folder.
+		"context": ".",
+		"dockerfile": "Dockerfile",
+		"args": {
+			// Workaround for new Docker version bug: https://github.com/microsoft/vscode-remote-release/issues/7958#issuecomment-1416777679
+			"BUILDKIT_INLINE_CACHE": "0"
+		}
+	},
+
+	// Creates a file in .devcontainer directory containing the host docker group GID.
+	// This is required to use docker with a non-root user inside the container.
+	"initializeCommand": ".devcontainer/scripts/initialize.sh",
+
+	// Actions to run after the container creation
+	"postCreateCommand": "post-create.sh",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-vsliveshare.vsliveshare",
+				"ms-azuretools.vscode-docker",
+				"GitHub.vscode-pull-request-github"
+			]
+		}
+	},
+
+	// Workspace
+	"workspaceMount": "source=${localWorkspaceFolder}/,target=/workspaces/code/,type=bind,consistency=cached",
+	"workspaceFolder": "/code",
+
+	// Mount local directories
+	"mounts": [
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind",
+		"source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind",
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+		"source=${localWorkspaceFolder}/.devcontainer/environment,target=/environment,type=bind",
+		"source=${localWorkspaceFolder}/.devcontainer/scripts,target=/scripts,type=bind",
+		// Workaround so the local .venv is not overwritten
+		"type=volume,source=devcontainer-code-venv,target=/workspaces/code/.venv"
+	],
+
+
+	// Use the vscode user inside the container
+	"remoteUser": "vscode",
+
+	// Forward jupyter lab/notebook port
+	"forwardPorts": [
+		8000
+	]
+}
