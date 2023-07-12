@@ -552,16 +552,14 @@ summary = "Extension pack for Python Markdown and MkDocs Material."
 
 [[package]]
 name = "mkdocs-mermaid2-plugin"
-version = "0.6.0"
+version = "1.0.1"
 requires_python = ">=3.5"
 summary = "A MkDocs plugin for including mermaid graphs in markdown sources"
 dependencies = [
     "beautifulsoup4>=4.6.3",
     "jsbeautifier",
-    "mkdocs-material",
     "mkdocs>=1.0.4",
     "pymdown-extensions>=8.0",
-    "pyyaml",
     "requests",
     "setuptools>=18.5",
 ]
@@ -1645,9 +1643,9 @@ content_hash = "sha256:9c46559050f8926b3daaa0204c38f82ec26a043f7a10710b5e171db42
     {url = "https://files.pythonhosted.org/packages/cd/3f/e5e3c9bfbb42e4cb661f71bcec787ae6bdf4a161b8c4bb68fd7d991c436c/mkdocs_material_extensions-1.1.1.tar.gz", hash = "sha256:9c003da71e2cc2493d910237448c672e00cefc800d3d6ae93d2fc69979e3bd93"},
     {url = "https://files.pythonhosted.org/packages/fd/c9/35af8ceabace3e33d1fb64b1749c6f4dac6129faa32f8a4229791f89f56a/mkdocs_material_extensions-1.1.1-py3-none-any.whl", hash = "sha256:e41d9f38e4798b6617ad98ca8f7f1157b1e4385ac1459ca1e4ea219b556df945"},
 ]
-"mkdocs-mermaid2-plugin 0.6.0" = [
-    {url = "https://files.pythonhosted.org/packages/44/a7/8897aca6e1372eb1581602572525d5ffe7e5cdbcc6423ae68b93cccd3087/mkdocs-mermaid2-plugin-0.6.0.tar.gz", hash = "sha256:99cca6db7c6b4a954a701dcb6b507191bc32a7b0b47eacf2885c1bacf77d1af1"},
-    {url = "https://files.pythonhosted.org/packages/79/ab/c8cfc1cfb2c805d454d6be17daaca8807de85d45e079dcc59ee9c9439b1b/mkdocs_mermaid2_plugin-0.6.0-py3-none-any.whl", hash = "sha256:ffbe8a7daa7ed718cb800c44c5ce4c0ff413caebf7b8b63d9c4a998dfd78a64d"},
+"mkdocs-mermaid2-plugin 1.0.1" = [
+    {url = "https://files.pythonhosted.org/packages/07/66/1b00b666437852d926bddaa6805181020f1c952db7670813cf53092e2c22/mkdocs_mermaid2_plugin-1.0.1-py3-none-any.whl", hash = "sha256:0946ab6bf24160b622cc4f893d01c8f00f4be315daf0b017ea856e036190076f"},
+    {url = "https://files.pythonhosted.org/packages/75/9d/318777c2df2e48c43efef8700c7b29b3b79620593ba5b1e2f834184c65c4/mkdocs-mermaid2-plugin-1.0.1.tar.gz", hash = "sha256:9f188101bf3f85259d7d5c495bbd40710be1475dc86d6376ad253cdc4589afb3"},
 ]
 "mkdocs-minify-plugin 0.6.4" = [
     {url = "https://files.pythonhosted.org/packages/09/b0/ae4e5eb003f1856a7f37780d7cd7fa49998cb042a35902139ed0ace69dc9/mkdocs-minify-plugin-0.6.4.tar.gz", hash = "sha256:1906e9687c39ded7d1ca959c76c6e52da6a8d0765e3981ad9812d3a489f1ecdb"},
