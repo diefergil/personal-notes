@@ -83,3 +83,7 @@ movie_rationales = load_dataset('movie_rationales)
 train = movie_rationales['train]
 df = train.to_pandas()
 ```
+
+# Resources
+
+* [Fine tuning hugginface model](https://github.com/nogibjj/hugging-face-cli-with-codespaces)

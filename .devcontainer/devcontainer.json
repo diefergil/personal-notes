@@ -29,7 +29,12 @@
 				"ms-python.vscode-pylance",
 				"ms-vsliveshare.vsliveshare",
 				"ms-azuretools.vscode-docker",
-				"GitHub.vscode-pull-request-github"
+				"GitHub.vscode-pull-request-github",
+				"GitHub.copilot",
+				"GitHub.copilot-labs",
+				"GitHub.copilot-chat",
+				"usernamehw.errorlens",
+				"tamasfe.even-better-toml"
 			]
 		}
 	},

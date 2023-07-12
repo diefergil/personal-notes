@@ -9,6 +9,8 @@ nav:
   - Cloud:
       - AWS:
           - App Runner: cloud/aws/app_runner.md
+      - Github:
+          - Codespaces: cloud/github/codespaces.md
       - Google Cloud:
           - App Engine: cloud/google/app_engine.md
   - Data Science:
