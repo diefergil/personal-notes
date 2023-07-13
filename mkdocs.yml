@@ -9,6 +9,9 @@ nav:
   - Cloud:
       - AWS:
           - App Runner: cloud/aws/app_runner.md
+          - Batch: cloud/aws/batch.md
+          - Lambda functions: cloud/aws/lambda.md
+          - Steps: cloud/aws/steps.md
       - Github:
           - Codespaces: cloud/github/codespaces.md
       - Google Cloud:

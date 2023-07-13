@@ -18,6 +18,7 @@ In this guide, we'll go through the steps to create a continuous integration
 ├── README.md
 ├── src
 ```
+
 ## Step 1: Create a Workflow File
 
 In your GitHub repository, create a new file in the `.github/workflows`

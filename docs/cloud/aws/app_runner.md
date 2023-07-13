@@ -1,11 +1,10 @@
 ---
 tags:
   - Mlops
-  - Continuous Integration
-  - FastApi
   - Devops
-  - Google Cloud
+  - AWS
   - Microservices
+  - App Runner
 ---
 # AWS App Runner
 
