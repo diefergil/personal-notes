@@ -16,6 +16,8 @@ nav:
           - Codespaces: cloud/github/codespaces.md
       - Google Cloud:
           - App Engine: cloud/google/app_engine.md
+          - Cloud Functions: cloud/google/cloud_functions.md
+          - Cloud Run: cloud/google/cloud_run.md
   - Data Science:
       - Statistics:
           - Introduction: data_science/statistics/intro.ipynb
