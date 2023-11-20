@@ -1,5 +1,66 @@
 # Hugginface
 
+## Hugginface CLI
+
+Hugging Face, primarily known for its advancements in natural language
+ processing, offers a robust Command Line Interface (CLI) that streamlines the
+  usage of its models and datasets. This guide provides a comprehensive
+   overview of installing the Hugging Face CLI and creating a project, drawing
+    parallels to GitHub's functionality. [Link](https://huggingface.co/docs/huggingface_hub/quick-start)
+
+### CLI Installation
+
+To begin, ensure you have Python installed on your system. Hugging Face CLI
+ requires Python 3.6 or later.
+
+Step 1: Install the Hugging Face Hub
+
+Use pip to install the Hugging Face Hub:
+
+```bash
+pip install huggingface_hub
+```
+
+Step 2: Verify Installation
+Confirm the installation by checking the version:
+
+```bash
+huggingface-cli --version
+```
+
+###  Creating a Project
+
+Similar to GitHub, Hugging Face allows users to create and manage projects.
+ Here's how you can create a new project.
+
+Step 1: Log In
+First, log in to your Hugging Face account via the CLI:
+
+```bash
+huggingface-cli login
+```
+
+Enter your Hugging Face credentials when prompted.
+
+Step 2: Create a New Repository
+To create a new repository, use:
+
+```bash
+huggingface-cli repo create your-repo-name
+```
+
+Replace your-repo-name with the desired name for your repository.
+
+Step 3: Clone the Repository
+Clone your newly created repository:
+
+```bash
+git clone <https://huggingface.co/username/your-repo-name>
+```
+
+Replace username with your Hugging Face username and your-repo-name with the
+ repository name.
+
 ## 🤗 Transformers
 
 Load State-of-the-art Machine Learning models for PyTorch, TensorFlow, and JAX
@@ -87,3 +148,5 @@ df = train.to_pandas()
 # Resources
 
 * [Fine tuning hugginface model](https://github.com/nogibjj/hugging-face-cli-with-codespaces)
+* [MLops codespace template](https://github.com/nogibjj/mlops-template) ->
+   Create a github codespace with some utilities around cuda and hugginface.
