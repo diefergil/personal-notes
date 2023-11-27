@@ -18,7 +18,7 @@ pip install fastapi
 pip install uvicorn
 ```
 
-## Baseic example
+## Basic example
 
 Here's a basic example of a FastAPI application:
 
@@ -107,7 +107,7 @@ from fastapi.staticfiles import StaticFiles # for serving static files
 from pydantic import BaseModel
 
 current_dir = dirname(abspath(__file__)) # get the path of the current script
-static_path = join(current_dir, 'static') 
+static_path = join(current_dir, 'static')
 
 app = FastAPI()
 app.mount('/ui', StaticFiles(directory=static_path), name='ui')
@@ -151,7 +151,7 @@ Here are some of the features that Uvicorn provides when used with FastAPI:
 
 * _Performance_: Uvicorn is one of the fastest ASGI servers due to its minimal and
   highly optimized code base. It's built on uvloop and httptools, which are
-  themselves very fast asynchronous I/O and HTTP parsing libraries, respectively.
+  themselves fast asynchronous I/O and HTTP parsing libraries, respectively.
 
 * _Concurrency_: By supporting the ASGI specification, Uvicorn allows FastAPI
 applications to handle many connections concurrently. This is great for
@@ -171,3 +171,54 @@ extremely useful during development.
 other ASGI servers. This means you can take full advantage of all the features
 provided by FastAPI and ASGI, while still getting the performance benefits of
 Uvicorn.
+
+# Serving a ML Model
+
+An example using [Hugginface](../nlp/huggingface.md)
+
+Better to use [ProcessPoolExecutor](https://luis-sena.medium.com/how-to-optimize-fastapi-for-ml-model-serving-6f75fb9e040d)
+
+```python
+import asyncio
+import time
+from concurrent.futures import ProcessPoolExecutor
+
+from fastapi import FastAPI, Request
+from sentence_transformers import SentenceTransformer
+
+app = FastAPI()
+sbertmodel = None
+
+
+def create_model():
+    global sbertmodel
+    sbertmodel = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
+
+
+# if you try to run all predicts concurrently, it will result in CPU trashing.
+pool = ProcessPoolExecutor(max_workers=1, initializer=create_model)
+
+
+def model_predict():
+    ts = time.time()
+    vector = sbertmodel.encode('How big is London')
+    return vector
+
+
+async def vector_search(vector):
+    # simulate I/O call (e.g. Vector Similarity Search using a VectorDB)
+    await asyncio.sleep(0.005)
+
+
+@app.get('/')
+async def entrypoint(request: Request):
+    loop = asyncio.get_event_loop()
+    ts = time.time()
+    # worker should be initialized outside endpoint to avoid cold start
+    vector = await loop.run_in_executor(pool, model_predict)
+    print(f"Model  : {int((time.time() - ts) * 1000)}ms")
+    ts = time.time()
+    await vector_search(vector)
+    print(f"io task: {int((time.time() - ts) * 1000)}ms")
+    return "ok"
+```

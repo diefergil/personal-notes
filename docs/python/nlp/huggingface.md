@@ -124,6 +124,141 @@ without any memory constraints for optimal speed and efficiency. We also feature
 Find your dataset today on the [Hugging Face Hub](https://huggingface.co/datasets),
  and take an in-depth look inside of it with the live viewer.
 
+### Example of a dataset generator class
+
+The GeneratorBasedBuilder class in the datasets library (often used with
+ Hugging Face's datasets module) is designed to create and manage datasets for
+  machine learning tasks, particularly in natural language processing. The
+   example demonstrates how to create a custom dataset class
+    WineRatings using this framework. Here's an overview of what the class does:
+
+Class Definition: WineRatings is a subclass of GeneratorBasedBuilder, meaning
+ it inherits functionalities for generating and processing datasets.
+
+Metadata: The class includes metadata such as _CITATION,_DESCRIPTION,
+ _HOMEPAGE, and_LICENSE, which provide information about the dataset, its
+  source, and usage terms.
+
+Dataset Version: VERSION is defined to keep track of different versions of the
+ dataset. This is useful for maintaining consistency and reproducibility in experiments.
+
+Dataset Information (_info method): This method defines the structure of the
+ dataset, specifying features like "name", "region", "variety", "rating", and
+  "notes". Each of these features is assigned a data type (e.g., string, float).
+
+Dataset Splits (_split_generators method): This method is used to define how
+ the dataset is split into different sets, typically "train", "validation", and
+  "test". It also specifies the file paths for each split.
+
+Data Generation (_generate_examples method): This method is crucial for
+ processing the data. It reads from the specified CSV files and yields
+  individual examples. Each example is a dictionary with keys corresponding to
+   the features defined in _info. The method iterates over the dataset,
+    converting each row of the CSV file into the structured format required by
+     the datasets library.
+
+In summary, the WineRatings class defines how to structure, split, and process
+ a dataset about wine ratings. It's a template for creating a custom dataset
+  that can be easily integrated with tools and models in the Hugging Face
+   ecosystem. This kind of setup is particularly useful for training and
+    evaluating machine learning models, as it standardizes data handling and
+     makes it easier to work with various datasets.
+
+```python
+'''A wine-ratings dataset'''
+
+import csv
+
+import datasets
+
+
+_CITATION = """\
+@InProceedings{huggingface:dataset,
+title = {A wine ratings dataset from regions around the world},
+author={Alfredo Deza
+},
+year={2022}
+}
+"""
+
+_DESCRIPTION = """\
+This is a dataset for wines in various regions around the world with names,
+ regions, ratings and descriptions
+"""
+
+_HOMEPAGE = "https://github.com/paiml/wine-ratings"
+
+_LICENSE = "MIT"
+
+class WineRatings(datasets.GeneratorBasedBuilder):
+
+    VERSION = datasets.Version("0.0.1")
+
+    def _info(self):
+        features = datasets.Features(
+            {
+                "name": datasets.Value("string"),
+                "region": datasets.Value("string"),
+                "variety": datasets.Value("string"),
+                "rating": datasets.Value("float"),
+                "notes": datasets.Value("string"),
+            }
+        )
+        return datasets.DatasetInfo(
+            description=_DESCRIPTION,
+            features=features,
+            homepage=_HOMEPAGE,
+            license=_LICENSE,
+            citation=_CITATION,
+        )
+
+    def _split_generators(self, dl_manager):
+
+        return [
+            datasets.SplitGenerator(
+                name=datasets.Split.TRAIN,
+                gen_kwargs={
+                    "filepath": "train.csv",
+                    "split": "train",
+                },
+            ),
+            datasets.SplitGenerator(
+                name=datasets.Split.VALIDATION,
+                gen_kwargs={
+                    "filepath": "validation.csv",
+                    "split": "validation",
+                },
+            ),
+            datasets.SplitGenerator(
+                name=datasets.Split.TEST,
+                gen_kwargs={
+                    "filepath": "test.csv",
+                    "split": "test"
+                },
+            ),
+        ]
+
+    # method parameters are unpacked from `gen_kwargs` as given in `_split_generators`
+    def _generate_examples(self, filepath, split):
+        with open(filepath, encoding="utf-8") as f:
+            csv_reader = csv.reader(f, delimiter=",")
+            next(csv_reader)
+            for id_, row in enumerate(csv_reader):
+                yield id_, {
+                    "name": row[0],
+                    "region": row[1],
+                    "variety": row[2],
+                    "rating": row[3],
+                    "notes": row[4],
+                }
+```
+
+[Here](https://huggingface.co/datasets/cais/mmlu/blob/main/mmlu.py) there is
+ another example.
+
+With this class you can deal with data without uploading to hugginface like for
+ example [here](https://huggingface.co/datasets/blimp/tree/6c2b0d452a8e2dc0bd53522a9872961a053d7130)
+
 ### Installation
 
 ```bash
