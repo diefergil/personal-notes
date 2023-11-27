@@ -980,8 +980,8 @@ files = [
 
 [[package]]
 name = "mkdocs-newsletter"
-version = "1.0.1"
-requires_python = ">=3.7"
+version = "1.1.0"
+requires_python = ">=3.8"
 summary = "Automatically create newsletters from the changes in a mkdocs repository"
 dependencies = [
     "beautifulsoup4>=4.10.0",
@@ -992,12 +992,12 @@ dependencies = [
     "mkdocs-material>=8.2.5",
     "mkdocs-section-index>=0.3.3",
     "mkdocs>=1.2.3",
-    "pydantic>=1.9.0",
+    "pydantic<2.0.0",
     "python-semantic-release>=7.26.0",
 ]
 files = [
-    {file = "mkdocs-newsletter-1.0.1.tar.gz", hash = "sha256:67ed079bc1db50cf04b657d310f0ae5c5ad6d765e1f8053a38fcb041190215ae"},
-    {file = "mkdocs_newsletter-1.0.1-py3-none-any.whl", hash = "sha256:6802851abbf0bae86b9a3622375e732054023cfa775d4e0db89d6aaa5690d880"},
+    {file = "mkdocs_newsletter-1.1.0-py3-none-any.whl", hash = "sha256:760fb0553bb0d3db30cf09643155b598e6f1511a0979c5c83729f1038e52983d"},
+    {file = "mkdocs_newsletter-1.1.0.tar.gz", hash = "sha256:65cdfdd09d09f1fd2d7492bbf4ed6e771d39e60a6e4c8f010e27f50a0752cf3e"},
 ]
 
 [[package]]
