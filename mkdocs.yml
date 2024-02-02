@@ -21,6 +21,14 @@ nav:
   - Data Science:
       - Statistics:
           - Introduction: data_science/statistics/intro.ipynb
+  - Generative AI:
+    - LLMs:
+      - Introduction: generative_ai/llms/introduction.md
+      - Instruction Fine-Tuning: generative_ai/llms/instruction_fine_tuning.md
+      - PEFT: generative_ai/llms/peft.md
+      - LoRa:  generative_ai/llms/lora.md
+      - Evaluation: generative_ai/llms/evaluation.md
+    - HuggingFace: generative_ai/huggingface.md
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
@@ -38,8 +46,6 @@ nav:
           - Click: python/cli/click.md
       - Environments:
           - Virtual environments: python/environments.md
-      - Natural language processing:
-          - HuggingFace: python/nlp/huggingface.md
       - Packaging:
           - Setuptools: python/packaging/setuptools.md
       - Tests:
