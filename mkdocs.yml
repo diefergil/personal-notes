@@ -22,13 +22,18 @@ nav:
       - Statistics:
           - Introduction: data_science/statistics/intro.ipynb
   - Generative AI:
-    - LLMs:
-      - Introduction: generative_ai/llms/introduction.md
-      - Instruction Fine-Tuning: generative_ai/llms/instruction_fine_tuning.md
-      - PEFT: generative_ai/llms/peft.md
-      - LoRa:  generative_ai/llms/lora.md
-      - Evaluation: generative_ai/llms/evaluation.md
-    - HuggingFace: generative_ai/huggingface.md
+      - LLMs:
+          - Introduction: generative_ai/llms/introduction.md
+          - Instruction Fine-Tuning:
+              - generative_ai/llms/instruction_fine_tuning.md
+          - Reinforcement Learning From Human Feedback:
+              - generative_ai/llms/rlhf.md
+          - PEFT: generative_ai/llms/peft.md
+          - LoRa: generative_ai/llms/lora.md
+          - Evaluation: generative_ai/llms/evaluation.md
+          - Deployment: generative_ai/llms/deployment.md
+          - Build applications: generative_ai/llms/build_applications.md
+      - HuggingFace: generative_ai/huggingface.md
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
@@ -77,7 +82,7 @@ plugins:
   - mkdocs-jupyter:
       execute: false
       allow_errors: false
-      show_input: True
+      show_input: true
 
 markdown_extensions:
   - abbr
