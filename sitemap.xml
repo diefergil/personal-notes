@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://diefergil.github.io/personal-notes/generative_ai/pytorch_intro/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/llms/build_applications/</loc>
          <lastmod>2024-02-13</lastmod>
          <changefreq>daily</changefreq>
