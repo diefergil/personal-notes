@@ -35,6 +35,9 @@ nav:
           - Build applications: generative_ai/llms/build_applications.md
       - HuggingFace: generative_ai/huggingface.md
       - Pytorch: generative_ai/pytorch_intro.ipynb
+      - Transfer Learning:
+          - Retrain mobilenet:
+              - generative_ai/transfer-learning-using-mobilenetv3.ipynb
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
