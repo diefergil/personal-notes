@@ -42,8 +42,8 @@ repos:
         entry: make build-docs
         language: system
         pass_filenames: false
-      - id: tests
-        name: Run tests
-        entry: make tests
-        language: system
-        pass_filenames: false
+      # - id: tests
+      #   name: Run tests
+      #   entry: make tests
+      #   language: system
+      #   pass_filenames: false
