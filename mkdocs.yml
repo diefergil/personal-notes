@@ -32,6 +32,7 @@ nav:
               - generative_ai/rlhf.md
           - PEFT: generative_ai/peft.md
           - LoRa: generative_ai/lora.md
+          - Probing: generative_ai/probing.md
       - Evaluation: generative_ai/evaluation.md
       - Deployment: generative_ai/deployment.md
       - Build applications: generative_ai/build_applications.md

@@ -16,7 +16,8 @@ fine-tuning. By addressing these weaknesses through additional training or
 other techniques, the performance of foundation models can be significantly improved.
 
 * [Prompting](./prompting.md)
-* Probing: Using probing to train a classifier is a powerful approach to
+* [Probing](./probing.md): Using probing to train a classifier is a
+ powerful approach to
   tailor generative AI foundation models, like BERT, for specific
   applications. By adding a modestly-sized neural network, known as a
   classification head, to a foundation model, one can specialize in
