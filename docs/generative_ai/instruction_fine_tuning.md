@@ -150,3 +150,7 @@ by linguists for the express purpose of training LLMs.
 
 Note that while FLAN models are general-purpose, we might still need Domain
 Adaptation for it to make it work well for our application.
+
+# Resources
+
+* [Create a sentiment classifier with Bert](https://www.kaggle.com/code/diegofndz/create-a-bert-sentiment-classifier)

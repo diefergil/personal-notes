@@ -81,10 +81,10 @@ about the task detailed in the prompt.
 For example, we might be doing semantic classification using our LLM. In that
 case, a prompt could be:
 
-    ```bash
-    Classify this review: I loved this movie!
-    Sentiment:
-    ```
+```bash
+Classify this review: I loved this movie!
+Sentiment:
+```
 
 This prompt works well with large LLMs but smaller LLMs might fail to follow
 the instruction due to their size and fewer number of features. This is also called
@@ -98,12 +98,12 @@ smaller LLM might be able to follow the instruction and figure out the correct
 output. An example of such a prompt is shown below. This is also called
 one-shot inference since we are providing a single example in the prompt:
 
-    ```bash
-    Classify this review: I loved this movie!
-    Sentiment: Positive
-    Classify this review: I don’t like this chair.
-    Sentiment:
-    ```
+```bash
+Classify this review: I loved this movie!
+Sentiment: Positive
+Classify this review: I don’t like this chair.
+Sentiment:
+```
 
 Here, we first provide an example to the model and then ask it to figure out the
 output for the I don’t like this chair review.
@@ -157,14 +157,14 @@ sampling. It determines the shape of the probability distribution that the model
     peaked. In other words, one (or a few more) words have very high probabilities
     while the rest of the words have very low probabilities:
 
-        ```bash
-        Probability Word
-        0.001 apple
-        0.002 banana
-        0.400 cake
-        0.012 donut
-        . . . . . .
-        ```
+    ```bash
+    Probability Word
+    0.001 apple
+    0.002 banana
+    0.400 cake
+    0.012 donut
+    . . . . . .
+    ```
 
     Notice how cake has a 40% chance of being picked while other words have very
     small chances of being picked. The resulting text will be less random.

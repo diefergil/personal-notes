@@ -22,22 +22,25 @@ nav:
       - Statistics:
           - Introduction: data_science/statistics/intro.ipynb
   - Generative AI:
-      - LLMs:
-          - Introduction: generative_ai/llms/introduction.md
+      - Introduction: generative_ai/introduction.md
+      - Adapting foundational models:
+          - Introduction: generative_ai/adapting_models.md
+          - Prompting: generative_ai/prompting.md
           - Instruction Fine-Tuning:
-              - generative_ai/llms/instruction_fine_tuning.md
+              - generative_ai/instruction_fine_tuning.md
           - Reinforcement Learning From Human Feedback:
-              - generative_ai/llms/rlhf.md
-          - PEFT: generative_ai/llms/peft.md
-          - LoRa: generative_ai/llms/lora.md
-          - Evaluation: generative_ai/llms/evaluation.md
-          - Deployment: generative_ai/llms/deployment.md
-          - Build applications: generative_ai/llms/build_applications.md
-      - HuggingFace: generative_ai/huggingface.md
-      - Pytorch: generative_ai/pytorch_intro.ipynb
-      - Transfer Learning:
-          - Retrain mobilenet:
-              - generative_ai/transfer-learning-using-mobilenetv3.ipynb
+              - generative_ai/rlhf.md
+          - PEFT: generative_ai/peft.md
+          - LoRa: generative_ai/lora.md
+      - Evaluation: generative_ai/evaluation.md
+      - Deployment: generative_ai/deployment.md
+      - Build applications: generative_ai/build_applications.md
+      - Tutorials:
+          - HuggingFace: generative_ai/huggingface.md
+          - Pytorch: generative_ai/pytorch_intro.ipynb
+          - Transfer Learning:
+              - Retrain mobilenet:
+                  - generative_ai/transfer-learning-using-mobilenetv3.ipynb
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
