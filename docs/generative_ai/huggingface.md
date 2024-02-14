@@ -280,6 +280,34 @@ train = movie_rationales['train]
 df = train.to_pandas()
 ```
 
+## Key Components
+
+### Tokenizers
+
+ These work like a translator, converting the words we use into smaller parts
+  and creating a secret code that computers can understand and work with.
+
+HuggingFace tokenizers help us break down text into smaller, manageable pieces
+ called tokens. These tokenizers are easy to use and also remarkably fast due to
+  their use of the Rust programming language.
+
+### Models
+
+ These are like the brain for computers, allowing them to learn and make
+ decisions based on information they've been fed.
+
+### Datasets
+
+ Think of datasets as textbooks for computer models. They are collections of
+  information that models study to learn and improve.
+
+### Trainers
+
+ Trainers are the coaches for computer models. They help these models get better
+ at their tasks by practicing and providing guidance. HuggingFace Trainers implement
+  the PyTorch training loop for you, so you can focus instead on other aspects
+  of working on the model.
+
 # Resources
 
 * [Fine tuning hugginface model](https://github.com/nogibjj/hugging-face-cli-with-codespaces)

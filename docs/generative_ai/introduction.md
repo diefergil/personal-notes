@@ -25,6 +25,22 @@ It is commonly accepted that as the size (in terms of number of parameters) of
 an LLM increases, so does its understanding of language. At the same time, it is
 also true the smaller models can be fine-tuned to perform well on specific tasks.
 
+## Foundation Model
+
+A foundation model is a powerful AI tool that can do many different things
+after being trained on lots of diverse data. These models are incredibly
+versatile and provide a solid base for creating various AI applications,
+like a strong foundation holds up different kind of buildings. By using a
+foundation model, we have a strong starting point for building specialized AI tasks.
+
+Foundation Models (GPT, BERT) and Traditional Models (Linear regression,
+SVM) are two distinct approaches in the field of artificial intelligence
+with different strengths. Foundation Models, which are built on large,
+diverse datasets, have the incredible ability to adapt and perform well
+on many different tasks. In contrast, Traditional Models specialize in
+specific tasks by learning from smaller, focused datasets, making them
+more straightforward and efficient for targeted applications.
+
 ## Terminology
 
 * Prompt: The input given to an LLM is called the prompt.
@@ -64,10 +80,12 @@ about the task detailed in the prompt.
 
 For example, we might be doing semantic classification using our LLM. In that
 case, a prompt could be:
-    ```bash
-    Classify this review: I loved this movie!
-    Sentiment:
-    ```
+
+```bash
+Classify this review: I loved this movie!
+Sentiment:
+```
+
 This prompt works well with large LLMs but smaller LLMs might fail to follow
 the instruction due to their size and fewer number of features. This is also called
 zero-shot inference since our prompt has zero examples regarding what the
@@ -79,12 +97,14 @@ This is where ICL comes into play. By adding examples to the prompt, even a
 smaller LLM might be able to follow the instruction and figure out the correct
 output. An example of such a prompt is shown below. This is also called
 one-shot inference since we are providing a single example in the prompt:
-    ```bash
-    Classify this review: I loved this movie!
-    Sentiment: Positive
-    Classify this review: I don’t like this chair.
-    Sentiment:
-    ```
+
+```bash
+Classify this review: I loved this movie!
+Sentiment: Positive
+Classify this review: I don’t like this chair.
+Sentiment:
+```
+
 Here, we first provide an example to the model and then ask it to figure out the
 output for the I don’t like this chair review.
 Sometimes, a single example won’t be enough for the model, for example when
@@ -137,14 +157,14 @@ sampling. It determines the shape of the probability distribution that the model
     peaked. In other words, one (or a few more) words have very high probabilities
     while the rest of the words have very low probabilities:
 
-        ```bash
-        Probability Word
-        0.001 apple
-        0.002 banana
-        0.400 cake
-        0.012 donut
-        . . . . . .
-        ```
+    ```bash
+    Probability Word
+    0.001 apple
+    0.002 banana
+    0.400 cake
+    0.012 donut
+    . . . . . .
+    ```
 
     Notice how cake has a 40% chance of being picked while other words have very
     small chances of being picked. The resulting text will be less random.
@@ -254,3 +274,10 @@ We can use such models for tasks such as translation, summarization and question
 answering. They are most useful where the input and output both are bodies of
 text.
 Examples: FLAN-T5, BART.
+
+### Data
+
+* [Common crawl](https://commoncrawl.org/)
+* [Github dataset](https://www.githubarchive.org/)
+* [Wikipedia](https://dumps.wikimedia.org/)
+* [Gutenberg](https://www.gutenberg.org/)
