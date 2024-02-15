@@ -74,3 +74,38 @@ completely frozen and only the soft prompt embedding vectors are updated to
 optimize the performance of the model on the original prompt.
 This is very efficient since a very small number of parameters are being trained
 (10, 000 to 100, 000).
+
+## Hugging Face PEFT Library
+
+### Key Concepts
+
+    1. Hugging Face PEFT allows you to fine-tune a model without having to fine-tune
+    all of its parameters.
+
+    2. Training a model using Hugging Face PEFT requires two additional steps beyond
+    traditional fine-tuning:
+
+Creating a PEFT config
+Converting the model into a PEFT model using the PEFT config
+Inference using a PEFT model is almost identical to inference using a non-PEFT
+ model. The only difference is that it must be loaded as a PEFT model.
+
+### Training with PEFT
+
+The PEFT config specifies the adapter configuration for your parameter-efficient
+ fine-tuning process. The base class for this is a `PeftConfig`, but this example
+  will use a `LoraConfig`, the subclass used for low rank adaptation (LoRA).
+
+A LoRA config can be instantiated like this:
+
+```python
+from peft import LoraConfig
+config = LoraConfig()
+```
+
+Look at the LoRA adapter documentation for additional hyperparameters that can
+be specified by passing arguments to `LoraConfig()`. [The Hugging Face LoRA
+conceptual guide](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora)
+ also contains additional explanations.
+
+See te complete example [here](./lora.md)
