@@ -39,6 +39,8 @@ nav:
       - Tutorials:
           - HuggingFace: generative_ai/huggingface.md
           - Pytorch: generative_ai/pytorch_intro.ipynb
+          - Promting techniques workflow:
+              - generative_ai/try_promt_techniques.ipynb
           - Transfer Learning:
               - Retrain mobilenet:
                   - generative_ai/transfer-learning-using-mobilenetv3.ipynb
@@ -101,7 +103,8 @@ markdown_extensions:
   - toc:
       permalink: ⚑
       baselevel: 2
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -205,6 +208,9 @@ extra_javascript:
   - optionalConfig.js
   - https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js
   - extra-loader.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 repo_name: diefergil/personal-notes
 repo_url: https://github.com/diefergil/personal-notes

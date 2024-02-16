@@ -55,9 +55,39 @@ more straightforward and efficient for targeted applications.
 
 ## Transformers
 
-TBD
+In mid-2017, Google published [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+ and introduced the Transformer model to the world. There are many wonderful works
+  explaining the Transformer model, in particular the [Illustrated
+  Transformer](https://jalammar.github.io/illustrated-transformer/) (a wonderful
+  introduction) and the
+  [Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/)
+   (with a line-by-line implementation in Python).
+
+### Encoder-only Models
+
+The first LLM to gain broad adoption was
+[BERT](https://arxiv.org/abs/1810.04805) (Bidirectional
+ Encoder Representations from Transformers), an encoder-only model. Encoder-only
+ models are most commonly used as base models for subsequent fine-tuning with a
+ distinct objective, e.g. for the inference-time task of binary classification of
+ movie reviews. (Mask some words)
+
+### Decoder-only Models
+
+However, before BERT was released, the first [GPT](https://openai.com/research/language-unsupervised)
+ (Generative Pre-Trained Transformer) model, a decoder-only model, was released
+ by OpenAI. Decoder-only models are most commonly used for the inference-time
+ task of text generation. In distinction to encoder-only models, the
+ Transformer's pre-training objective of next token prediction is very similar
+ to the decoder-only model's inference-time task of text generation.
 
 ## Prompting and Prompt Engineering
+
+We define a prompt as:
+
+* $X \rightarrow$ The user prompt, is like the features in ML.
+* $Y \rightarrow$ Masked (Next token)/Response(Next Token) Like Y label in ML.
+* $\theta \rightarrow$  Model weights
 
 ### Prompting
 
@@ -185,6 +215,35 @@ sampling. It determines the shape of the probability distribution that the model
     Clearly, when T = 1, the model uses the softmax output as is for random
     sampling.
 
+    You can find more information in how the different decoders works [Link](https://huggingface.co/blog/how-to-generate)
+
+### Virtuous Feedback Loops
+
+Setting aside the model weights, we can see how the LLM can enable virtuous
+feedback loops (as opposed to the vicious feedback loops seen earlier) by
+considering how the LLM can aid in the generation of helpful prompt context.
+
+Recall for the prediction of $Y$, given $X$, $P(Y|X)$, that the LLM generates
+each token in Y, one at a time, appending the previously generated token to $X$.
+In the case of a prompt, $n$ tokens long, and a complete prompt + LLM response $k$
+tokens long, then the tokens in $X$ from $n+1$ to $k-1$ came from the LLM.
+This can be represented mathematically below:
+
+$P(Y_{n+1} | X_{0,1..n}) \rightarrow$
+$P(Y_{n+2} | X_{0,1..n+1}) \rightarrow$
+$P(Y_{n+3} | X_{0,1..n+2}) \rightarrow$
+$\dots \rightarrow P(Y_k | X_{0,1..k-1})$
+
+Techniques that guide the LLM toward generating assistive tokens at the start
+of the LLM response can aid in answering a question at the end of the prompt,
+ effectively helping the LLM write its own features.
+
+An example of a virtuous feedback loop is provided by “Chain of Thought”
+
+#### Workflow to try prompts
+
+* [Notebook](./try_promt_techniques.ipynb)
+
 ## Pre-training Large Language Models
 
 ### Initial Training Process (Pre-training)
@@ -277,7 +336,52 @@ Examples: FLAN-T5, BART.
 
 ### Data
 
+#### Most common sources
+
 * [Common crawl](https://commoncrawl.org/)
 * [Github dataset](https://www.githubarchive.org/)
 * [Wikipedia](https://dumps.wikimedia.org/)
 * [Gutenberg](https://www.gutenberg.org/)
+
+#### Generating traing data with LLMs
+
+LLMs can be used for the generation of training data along multiple dimensions, including:
+
+* Generation of responses from pre-existing queries_
+
+    Enabling instruction fine-tuning dataset pairs:
+
+    ```bash
+    {"prompt": <existing_instruction>, "completion": <LLM_generated_response>}
+    ```
+
+    This is probably the most straightforward usage of LLMs for synthetic
+    dataset generation. Ensure LLM's license supports such usage.
+
+* Generation of instructions from pre-existing documents.
+    Enabling instruction fine-tuning dataset pairs:
+
+    ```bash
+    {"prompt": <LLM_generated_instruction>, "completion": <existing_document_chunk>}
+    ```
+
+    This method, known as back-translation from the development of translation
+    systems for low-resource languages, has been given this modern spin in
+    ["Self-Alignment with Instruction Backtranslation"](https://arxiv.org/abs/2308.06259)
+
+* Generation of preference data from existing prompt/response LLM pairs:
+    For example, the comparison of:
+
+    ```bash
+    {{"prompt": <prompt_0>, "completion": <completion_a>}, "pref": LLM_generated_preference_1}}
+    ```
+
+    vs.
+
+    ```bash
+    {{"prompt": <prompt_0>, "completion": <completion_a>}, "pref": LLM_generated_preference_-1}}
+    ```
+
+    This can be used for Reinforcement Learning from Human Feedback (despite the
+    feedback being non-human in this case), as explored more in
+    ["Constitutional AI: Harmlessness from AI Feedback"](https://arxiv.org/abs/2212.08073).

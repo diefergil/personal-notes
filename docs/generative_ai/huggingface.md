@@ -313,3 +313,5 @@ HuggingFace tokenizers help us break down text into smaller, manageable pieces
 * [Fine tuning hugginface model](https://github.com/nogibjj/hugging-face-cli-with-codespaces)
 * [MLops codespace template](https://github.com/nogibjj/mlops-template) ->
    Create a github codespace with some utilities around cuda and hugginface.
+* [Example Notebooks](https://github.com/huggingface/transformers/tree/main/notebooks)
+* [Train Bert for classification](https://github.com/kaushaltrivedi/bert-toxic-comments-multilabel?tab=readme-ov-file)
