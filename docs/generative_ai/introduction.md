@@ -242,7 +242,7 @@ An example of a virtuous feedback loop is provided by “Chain of Thought”
 
 #### Workflow to try prompts
 
-* [Notebook](./try_promt_techniques.ipynb)
+* [Notebook](./tutorials/try_promt_techniques.ipynb)
 
 ## Pre-training Large Language Models
 

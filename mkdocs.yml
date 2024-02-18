@@ -37,13 +37,13 @@ nav:
       - Deployment: generative_ai/deployment.md
       - Build applications: generative_ai/build_applications.md
       - Tutorials:
-          - HuggingFace: generative_ai/huggingface.md
-          - Pytorch: generative_ai/pytorch_intro.ipynb
+          - HuggingFace: generative_ai/tutorials/huggingface.md
+          - Pytorch: generative_ai/tutorials/pytorch_intro.ipynb
           - Promting techniques workflow:
-              - generative_ai/try_promt_techniques.ipynb
+              - generative_ai/tutorials/try_promt_techniques.ipynb
           - Transfer Learning:
               - Retrain mobilenet:
-                  - generative_ai/transfer-learning-using-mobilenetv3.ipynb
+                  - generative_ai/tutorials/transfer-learning-using-mobilenetv3.ipynb
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md

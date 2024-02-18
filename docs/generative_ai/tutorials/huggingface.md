@@ -291,6 +291,69 @@ HuggingFace tokenizers help us break down text into smaller, manageable pieces
  called tokens. These tokenizers are easy to use and also remarkably fast due to
   their use of the Rust programming language.
 
+Hugging Face provides pretrained tokenizers through its flexible API as part of
+ the `transformers`` Python library.
+
+You can:
+
+    * Use a tokenizer off the shelf. (Don't need to modify it at all).
+    * Fine tuning with your own data.
+    * Train your tokenizer from scratch.
+
+#### Encoding text
+
+To tokenize text with Hugging Face, instantiate a tokenizer object with the
+ `AutoTokenizer.from_pretrained`` method. Pass in the name of the model as a
+ string value.
+
+```python
+# 'bert-base-cased' can be replaced with a different model as needed
+my_tokenizer = AutoTokenizer.from_pretrained('bert-base-cased')
+```
+
+Then you can use the tokenizer object to generate either string tokens or integer
+ ID tokens.
+
+To generate string tokens, including special tokens:
+
+```python
+tokens = my_tokenizer(raw_text).tokens()
+```
+
+To generate integer ID tokens you can use the `.encode` method on raw text,
+or the `.convert_tokens_to_ids` method on string tokens.
+
+```python
+# Option for raw text
+token_ids = my_tokenizer.encode(raw_text)
+# Option for string tokens
+token_ids = my_tokenizer.convert_tokens_to_ids(tokens)
+```
+
+#### Decoding text
+
+Integer ID tokens can be converted back to text using the `.decode` method:
+
+```python
+decoded_text = my_tokenizer.decode(token_ids)
+```
+
+##### Unknown tokens
+
+Pretrained tokenizers have a predetermined vocabulary. If a token is not in the
+tokenizer's vocabulary, it will be lost in the encoding + decoding process. In
+this example, unknown tokens were replaced with `[UNK]`, but this behavior will
+vary depending on the tokenizer.
+
+#### Documentation
+
+* [Hugging Face's PreTrainedTokenizer](https://huggingface.co/docs/transformers/main_classes/tokenizer)
+* [Hugging Face's AutoTokenizer](https://huggingface.co/docs/transformers/main_classes/tokenizer)
+
+#### Tutorial
+
+* [Tokenizer intro](./hugging-face-tokenizer.ipynb)
+
 ### Models
 
  These are like the brain for computers, allowing them to learn and make
