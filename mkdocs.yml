@@ -36,8 +36,11 @@ nav:
       - Evaluation: generative_ai/evaluation.md
       - Deployment: generative_ai/deployment.md
       - Build applications: generative_ai/build_applications.md
+      - HuggingFace:
+          - Overview: generative_ai/huggingface.md
+          - Key components: generative_ai/tutorials/hugginface_intro.ipynb
+          - Tokenizer: generative_ai/tutorials/hugging-face-tokenizer.ipynb
       - Tutorials:
-          - HuggingFace: generative_ai/tutorials/huggingface.md
           - Pytorch: generative_ai/tutorials/pytorch_intro.ipynb
           - Promting techniques workflow:
               - generative_ai/tutorials/try_promt_techniques.ipynb

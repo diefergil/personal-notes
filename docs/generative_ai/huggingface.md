@@ -352,7 +352,7 @@ vary depending on the tokenizer.
 
 #### Tutorial
 
-* [Tokenizer intro](./hugging-face-tokenizer.ipynb)
+* [Tokenizer intro](./tutorials/hugging-face-tokenizer.ipynb)
 
 ### Models
 

@@ -174,7 +174,7 @@ Uvicorn.
 
 # Serving a ML Model
 
-An example using [Hugginface](../../generative_ai/tutorials/huggingface.md)
+An example using [Hugginface](../../generative_ai/huggingface.md)
 
 Better to use [ProcessPoolExecutor](https://luis-sena.medium.com/how-to-optimize-fastapi-for-ml-model-serving-6f75fb9e040d)
 
