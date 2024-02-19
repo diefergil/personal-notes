@@ -81,6 +81,152 @@ However, before BERT was released, the first [GPT](https://openai.com/research/l
  Transformer's pre-training objective of next token prediction is very similar
  to the decoder-only model's inference-time task of text generation.
 
+### Attention Scores
+
+The attention calculation computes the similarity matrix between queries and
+keys $QK^T$ then uses a softmax function to convert the scores into a
+probability distribution, which is multiplied by the values embeddings $V$
+to produce the output vector $Z$
+
+Before applying the softmax function, $QK^{T}$  is divided by $\sqrt{d_{k}}$
+(the square root of the dimension of $K$) in order to avoid tiny gradients at
+ extreme values.
+
+Attention scores describes the mathematical definition of attention. Attenntion
+mechanisms are about how mathematical operations are applied to different set
+of queries, kyes and values.
+
+This creates the following complete formula for scaled multiplicative attention:
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$
+
+#### Types
+
+##### Multiplicative Attention (Dot-Product Attention)
+
+Multiplicative attention, also known as dot-product attention, calculates the
+attention scores by performing a dot product between the query and the key. It
+is a simple and efficient way to measure the similarity between the query and
+the key.
+
+Attention(Q, K, V) = softmax(QK^T)V
+
+In this formula, $Q$ represents the query matrix, $K$ the key matrix, and $V$ the
+value matrix. The attention scores are obtained by first calculating the dot
+product between $Q$ and $K^{T$ (the transpose of $K$), followed by applying the
+softmax function to ensure the scores are normalized to sum up to 1.
+
+##### Additive Attention
+
+Additive attention, also known as content-based attention, computes the attention
+scores by adding the query and the key together, usually followed by a non-linear
+activation function such as tanh, and then projecting the result through a
+learnable weight matrix to produce the scores.
+
+Attention(Q, K, V) = softmax(W[(Q + K)^T])V
+
+Here, $W$ is a weight matrix that is learned during training. The addition of
+$Q$ and $K$ allows for a more flexible interaction between the query and the
+keys, potentially capturing more complex dependencies.
+
+##### General Attention
+
+General attention is a variant of multiplicative attention where the similarity
+ between the query and the key is calculated using a learnable weight matrix.
+ This allows the model to learn an optimal way of computing attention scores.
+
+Attention(Q, K, V) = softmax(QW_kK^T)V
+
+In this case, $W_{k}$ is a learnable weight matrix that transforms the key before
+ computing the dot product with the query. This adds an additional level of
+  flexibility compared to the standard dot-product attention, as the model can
+  learn the most effective way to compare queries and keys.
+
+Each of these attention mechanisms provides a different way to calculate how
+much focus or "attention" should be given to different parts of the input when
+ performing a task, allowing models to dynamically weigh the importance of
+  different elements in the data.
+
+### Attention Mechanisms
+
+Attention scores describes the mathematical definition of attention. Attenntion
+mechanisms are about how mathematical operations are applied to different set
+of queries, kyes and values.
+
+when some part of a neural network applies an attention score or mechanism to
+some information, you might think that the standard phrasing would be "A pays
+ attention to B". Instead, we typically say that "A attends to B". This standard
+  terminology is more concise and less anthropomorphizing.
+
+#### Self-Attention
+
+This was the original attention mechanism described by Vaswani et al. (2017).
+
+$$Q = K = V$$
+
+Each position in the sequence attends to all positions in the same sequence.
+
+Self-attention has an interaction distance of \(O(1)\), which is a major
+improvement over the \(O(n)\) interaction distance of an RNN.
+The drawback is that it has \(O(n^2)\) computation.
+
+#### Multi-Head Attention
+
+Multiple Q, K, V heads
+
+Each head has its own set of weights, and attention is distributed, with each
+head focusing on a different specialized feature of the input.
+
+#### Multi-Query Attention
+
+Multiple Q heads, 1 K, V head
+
+Each query is distinct and shares the same key and value. Compared to multi-head
+ attention, it is more efficient and can significantly increase the training
+ batch size through parameter sharing.
+
+Billion-parameter LLMs like Falcon and LLaMA 2 use multi-query attention.
+
+#### Cross-Attention
+
+Q ≠ K, V
+
+Used to "cross-reference" between different modalities or sequences. This
+mechanism is especially useful for tasks where different data types interact,
+ e.g., image captioning.
+
+### Attention problems and solutions
+
+If self-attention is so powerful, can it replace RNNs altogether? Vaswani et al.
+ (2017) argue that it can, with the right solutions in place to address its limitations.
+
+* Problem: lack of input order
+
+    * As previously described with ELMo, context is important for understanding
+     the meaning of words.
+    * Self-attention doesn't understand this by default, so we add positional
+     encodings as part of the input embeddings.
+
+* Problem: no nonlinearity between repeated self-attention layers
+
+    * The reason we typically use an activation function like ReLU in a neural
+    network layer, rather than just a linear output, is to enable the model to
+    capture more complexity. Linear outputs can be reduced to a simple
+    $\(y = mx + b\)$ style formula.
+    * Self-attention layers don't have this nonlinearity by default, so we add
+    a feed-forward network for each processed token afterward.
+
+* Problem: "cheating" when predicting a sequence
+
+    * The goal of a deep learning model is to be able to predict some unknown
+    information given some known information. If all of the information is known,
+     the model can't learn the relationships properly.
+    * By default, self-attention can look at all of the data, including the
+    "future" that it is trying to predict. To prevent this, we mask attention on
+    future words during decoding.
+
 ## Prompting and Prompt Engineering
 
 We define a prompt as:
