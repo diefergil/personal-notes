@@ -39,9 +39,37 @@ breaks the text into smaller "words" and will be the base of what tokens will be
 
 More normalization can reduces complexity in the text. But can lose context.
 
+Example:
+
+```python
+def normalize_text(text: str) -> str:
+    # Only keep ASCII letters, numbers, punctuation, and whitespace characters
+    acceptable_characters = (
+        string.ascii_letters
+        + string.digits
+        + string.punctuation
+        + string.whitespace
+    )
+    normalized_text = ''.join(
+        filter(lambda letter: letter in acceptable_characters, text)
+    )
+    # Make text lower-case
+    normalized_text = normalized_text.lower()
+    return normalized_text
+```
+
 #### Pretokenization
 
 breaks the text into smaller "words" and will be the base of what tokens will be.
+
+Example:
+
+```python
+def pretokenize_text(text: str) -> list[str]:
+    # Split based on spaces
+    smaller_pieces = text.split()
+    return smaller_pieces
+```
 
 #### Tokenization step
 
@@ -71,6 +99,27 @@ Methods:
         * [SentencePiece](https://github.com/google/sentencepiece) (T5, ALBERT
          and XLNET)
 
+Example:
+
+```python
+# Combine normalization and pretokenization steps before breaking things further
+def tokenize_text(text: str) -> list[str]:
+    # Apply created steps
+    normalized_text: str = normalize_text(text)
+    pretokenized_text: list[str] = pretokenize_text(normalized_text)
+    # COMPLETE: Go through pretokenized text to create a list of tokens
+    tokens = []
+    # Small 'pieces' to make full tokens
+    for word in pretokenized_text:
+        tokens.extend(
+            re.findall(
+                f'[\w]+|[{string.punctuation}]', # Split word at punctuations
+                word,
+            )
+        )
+    return tokens
+```
+
 #### Postprocessing
 
 Applies additional transformations, such as adding tags at the beginning and end
@@ -78,6 +127,21 @@ Applies additional transformations, such as adding tags at the beginning and end
 
  ```bash
  [CLS] do you pre fer cof fee or t ea ? [EOS]
+```
+
+Example:
+
+```python
+def postprocess_tokens(tokens: list[str]) -> list[str]:
+    # Can use a format like '[BOS]' & '[EOS]'
+    bos_token = '[BOS]'
+    eos_token = '[EOS]'
+    updated_tokens = (
+        [bos_token]
+        + tokens
+        + [eos_token]
+    )
+    return updated_tokens
 ```
 
 You can learn about hugginface tokenizers [here](../tutorials/hugging-face-tokenizer.ipynb).
