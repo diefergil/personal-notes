@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:4b44ac0bfd0d0a229ced1e2a5a8c7b3761afd1b15e7c2aae2ecbcb3b65ce3ca7"
+content_hash = "sha256:6ad924083cd9daae50cfbc5ed0a39194025fea482096c866e2fb79c2f478d845"
 
 [[package]]
 name = "accelerate"
@@ -468,7 +468,7 @@ files = [
 
 [[package]]
 name = "datasets"
-version = "2.17.0"
+version = "2.17.1"
 requires_python = ">=3.8.0"
 summary = "HuggingFace community-driven open-source library of datasets"
 dependencies = [
@@ -489,8 +489,8 @@ dependencies = [
     "xxhash",
 ]
 files = [
-    {file = "datasets-2.17.0-py3-none-any.whl", hash = "sha256:1479667383d002c2b4a4fc6ac0fb99a7f8e7e440f348991ae7343837f9fc84db"},
-    {file = "datasets-2.17.0.tar.gz", hash = "sha256:81e32e0393a8ca398800223992bfd6222f8a830a6e6aaf3b41b887646f771a86"},
+    {file = "datasets-2.17.1-py3-none-any.whl", hash = "sha256:346974daf2fe9c14ddb35646896b2308b95e7dc27709d1a6e25273573b140cf8"},
+    {file = "datasets-2.17.1.tar.gz", hash = "sha256:66ec24077807f374f379b62ab0256c4dcb7c38a57ff1529a22993e8d95f2f9f1"},
 ]
 
 [[package]]
