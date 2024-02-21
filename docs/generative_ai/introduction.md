@@ -559,6 +559,9 @@ An example of a virtuous feedback loop is provided by “Chain of Thought”
 * [Github dataset](https://www.githubarchive.org/)
 * [Wikipedia](https://dumps.wikimedia.org/)
 * [Gutenberg](https://www.gutenberg.org/)
+* [Stanford Question Answering Dataset](https://rajpurkar.github.io/SQuAD-explorer/)
+* [HotPotQA](https://hotpotqa.github.io/)
+* [SubjQA](https://github.com/megagonlabs/SubjQA)
 
 ### Generating traing data with LLMs
 
