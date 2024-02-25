@@ -47,6 +47,7 @@ nav:
           - Transfer Learning:
               - Retrain mobilenet:
                   - generative_ai/tutorials/transfer-learning-using-mobilenetv3.ipynb
+          - GANs: generative_ai/tutorials/train_gans.ipynb
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
