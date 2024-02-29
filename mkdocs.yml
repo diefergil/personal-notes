@@ -41,13 +41,16 @@ nav:
           - Key components: generative_ai/tutorials/hugginface_intro.ipynb
           - Tokenizer: generative_ai/tutorials/hugging-face-tokenizer.ipynb
       - Tutorials:
-          - Pytorch: generative_ai/tutorials/pytorch_intro.ipynb
-          - Promting techniques workflow:
-              - generative_ai/tutorials/try_promt_techniques.ipynb
-          - Transfer Learning:
-              - Retrain mobilenet:
-                  - generative_ai/tutorials/transfer-learning-using-mobilenetv3.ipynb
-          - GANs: generative_ai/tutorials/train_gans.ipynb
+          - Generative AI:
+              - Pytorch: generative_ai/tutorials/pytorch_intro.ipynb
+              - Promting techniques workflow:
+                  - generative_ai/tutorials/try_promt_techniques.ipynb
+              - React promt example: generative_ai/tutorials/example_ReAcT_prompt.ipynb # yamllint disable-line
+              - Open AI call function: generative_ai/tutorials/openai_functions.ipynb # yamllint disable-line
+              - Transfer Learning:
+                  - Retrain mobilenet:
+                      - generative_ai/tutorials/transfer-learning-mobilenet.ipynb
+              - GANs: generative_ai/tutorials/train_gans.ipynb
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
