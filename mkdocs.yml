@@ -51,6 +51,7 @@ nav:
                   - generative_ai/tutorials/try_promt_techniques.ipynb
               - React promt example: generative_ai/tutorials/example_ReAcT_prompt.ipynb # yamllint disable-line
               - Open AI call function: generative_ai/tutorials/openai_functions.ipynb # yamllint disable-line
+              - Langchain parser chain: generative_ai/tutorials/sentiment-analysis-starter.ipynb # yamllint disable-line
               - Transfer Learning:
                   - Retrain mobilenet:
                       - generative_ai/tutorials/transfer-learning-mobilenet.ipynb
