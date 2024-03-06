@@ -40,14 +40,24 @@ nav:
           - Overview: generative_ai/huggingface.md
           - Key components: generative_ai/tutorials/hugginface_intro.ipynb
           - Tokenizer: generative_ai/tutorials/hugging-face-tokenizer.ipynb
+          - Difussers: generative_ai/tutorials/diffusers.ipynb
+      - Embeddings:
+          - Lance DB: generative_ai/tutorials/lance_db.ipynb
+          - Lance DB Multimodal: generative_ai/tutorials/lance_db_multimodal.ipynb # yamllint disable-line
       - Tutorials:
-          - Pytorch: generative_ai/tutorials/pytorch_intro.ipynb
-          - Promting techniques workflow:
-              - generative_ai/tutorials/try_promt_techniques.ipynb
-          - Transfer Learning:
-              - Retrain mobilenet:
-                  - generative_ai/tutorials/transfer-learning-using-mobilenetv3.ipynb
-          - GANs: generative_ai/tutorials/train_gans.ipynb
+          - Generative AI:
+              - Pytorch: generative_ai/tutorials/pytorch_intro.ipynb
+              - Promting techniques workflow:
+                  - generative_ai/tutorials/try_promt_techniques.ipynb
+              - React promt example: generative_ai/tutorials/example_ReAcT_prompt.ipynb # yamllint disable-line
+              - Open AI call function: generative_ai/tutorials/openai_functions.ipynb # yamllint disable-line
+              - Langchain parser chain: generative_ai/tutorials/langchain_examples.ipynb # yamllint disable-line
+              - Transfer Learning:
+                  - Retrain mobilenet:
+                      - generative_ai/tutorials/transfer-learning-mobilenet.ipynb
+              - GANs: generative_ai/tutorials/train_gans.ipynb
+              - DDPM: generative_ai/tutorials/training_DDPM.ipynb
+
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
@@ -85,7 +95,8 @@ plugins:
   - minify:
       minify_html: true
   - section-index
-  # - mkdocs-newsletter TODO: check if it works & the problem with git in docker
+  # - mkdocs-newsletter
+  #TODO: check if it works & the problem with git in docker
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "docs.hooks:copy_ads_txt"
