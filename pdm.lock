@@ -1061,7 +1061,7 @@ files = [
 
 [[package]]
 name = "gradio"
-version = "4.20.0"
+version = "4.20.1"
 requires_python = ">=3.8"
 summary = "Python library for easily interacting with trained machine learning models"
 dependencies = [
@@ -1093,8 +1093,8 @@ dependencies = [
     "uvicorn>=0.14.0",
 ]
 files = [
-    {file = "gradio-4.20.0-py3-none-any.whl", hash = "sha256:f438667c4982452abf33d212c010c3b00c0d341e56a7835220deada420f91148"},
-    {file = "gradio-4.20.0.tar.gz", hash = "sha256:e056f73627d879bc8132fd49e64051c17c8584acde2403561686ea06f4903ca2"},
+    {file = "gradio-4.20.1-py3-none-any.whl", hash = "sha256:01815047593f8d653d609ab2d9b89a7d435fd20438602de19278f8cd6acd1fb9"},
+    {file = "gradio-4.20.1.tar.gz", hash = "sha256:9efb88a4e1626f4f452467e45f44c37dbd8b57f7839f71326ec169e40de5cdab"},
 ]
 
 [[package]]
@@ -1662,7 +1662,7 @@ files = [
 
 [[package]]
 name = "lancedb"
-version = "0.6.1"
+version = "0.6.2"
 requires_python = ">=3.8"
 summary = "lancedb"
 dependencies = [
@@ -1672,7 +1672,7 @@ dependencies = [
     "deprecation",
     "overrides>=0.7",
     "pydantic>=1.10",
-    "pylance==0.10.1",
+    "pylance==0.10.2",
     "pyyaml>=6.0",
     "ratelimiter~=1.0",
     "requests>=2.31.0",
@@ -1681,11 +1681,11 @@ dependencies = [
     "tqdm>=4.27.0",
 ]
 files = [
-    {file = "lancedb-0.6.1-cp38-abi3-macosx_10_15_x86_64.whl", hash = "sha256:4842593b395a07405213388c6791a77f60181371e21f7bb8944f823f82488d7d"},
-    {file = "lancedb-0.6.1-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:853a3fb183cec40c16d157afba741513b56c3a663dd089265fa4c662e245a21b"},
-    {file = "lancedb-0.6.1-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:58956013da91f4d9e553a23e1b990adbe3a0a7077fc30269976cf5fa6ea99564"},
-    {file = "lancedb-0.6.1-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:9d12ae8951b6f1842ead84149131445d58a99e506ca1f1396705d3ce712cd6f0"},
-    {file = "lancedb-0.6.1-cp38-abi3-win_amd64.whl", hash = "sha256:bb3556d2a8409dacba2b719c43a1fa09f8c43db675357ede1cfaece929df8811"},
+    {file = "lancedb-0.6.2-cp38-abi3-macosx_10_15_x86_64.whl", hash = "sha256:b1376b6b082bbefed78a37878df888aac46f331f0768ade3777388e3e65186c1"},
+    {file = "lancedb-0.6.2-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:92a3621ffddb3fbf453088585f39233d2672ce1130ea8a881eeb34c5eef07a0c"},
+    {file = "lancedb-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b32751ef65471cda35be9e1f413d01b6b99290a5f8b057f5d73d149a240c2734"},
+    {file = "lancedb-0.6.2-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:fb4df69d35b809a68c836687cd0db478165da81f5e9259f9b91ba2430e6491c5"},
+    {file = "lancedb-0.6.2-cp38-abi3-win_amd64.whl", hash = "sha256:0a6a26b2d53ae4a432c57629857449fe70d5aa6979cdf6f9c65f94d10d6b98ee"},
 ]
 
 [[package]]
@@ -3298,7 +3298,7 @@ files = [
 
 [[package]]
 name = "pylance"
-version = "0.10.1"
+version = "0.10.2"
 requires_python = ">=3.8"
 summary = "python wrapper for Lance columnar format"
 dependencies = [
@@ -3306,11 +3306,11 @@ dependencies = [
     "pyarrow>=12",
 ]
 files = [
-    {file = "pylance-0.10.1-cp38-abi3-macosx_10_15_x86_64.whl", hash = "sha256:f7dd2aab0416c0770f626104ab36f729a0268d61249452761711d018c1e7ef9e"},
-    {file = "pylance-0.10.1-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:760581a970e44dd054ad3740eb154df88fc7a016bb35b4adec73b8d229656a29"},
-    {file = "pylance-0.10.1-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:baae54aa37a1d2c5ef065e92e0805106d53b89f7f1fcd1a457a1bad91e5ff180"},
-    {file = "pylance-0.10.1-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:3d9622b8f660db3d1c7ad233547e223437a838f3eced1ca2e59c702bded84139"},
-    {file = "pylance-0.10.1-cp38-abi3-win_amd64.whl", hash = "sha256:287078721ba081d4b6b3ddd94eb3f17a01dfeb0f59b7f1ae72ec42faa46c3930"},
+    {file = "pylance-0.10.2-cp38-abi3-macosx_10_15_x86_64.whl", hash = "sha256:e045609dde4701c37136d3c1a047a7dff072a2ca06c9440bb0ca2c56b629a35f"},
+    {file = "pylance-0.10.2-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:c801fc8da73418f049e60c494431cd613253bcd195bd93abe13713f2a122df0c"},
+    {file = "pylance-0.10.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bbec7eeb29d479319db61c7fd3bb91f096c8fd13824feab0773a5b5e268ca698"},
+    {file = "pylance-0.10.2-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:86c1ef6cefccf23e1b65a8686054aea6498af6cbcf370c35a92cd6f5bc87db11"},
+    {file = "pylance-0.10.2-cp38-abi3-win_amd64.whl", hash = "sha256:cdb776f9c22bd4b488792a40f68c3750b2e06795c053f4beb0356fcf34aab8ad"},
 ]
 
 [[package]]
