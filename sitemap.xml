@@ -2,272 +2,287 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://diefergil.github.io/personal-notes/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/about/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/hooks/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/aws/app_runner/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/aws/batch/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/aws/lambda/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/aws/steps/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/github/codespaces/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/google/app_engine/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/google/cloud_functions/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/cloud/google/cloud_run/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/data_science/statistics/intro/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/adapting_models/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/build_applications/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/deployment/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/evaluation/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/huggingface/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/instruction_fine_tuning/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/introduction/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/lora/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/peft/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/probing/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/prompting/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/rlhf/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/nlp/intro/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/Building_QA_Datasets/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/diffusers/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/example_ReAcT_prompt/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/hugginface_intro/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/hugging-face-tokenizer/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/lance_db/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/lance_db_multimodal/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/langchain_examples/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/openai_functions/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/pytorch_intro/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/train_gans/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/training_DDPM/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/transfer-learning-mobilenet/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/try_promt_techniques/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/wikipedia_qa/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/langchain/functions/L2-lcel-student/</loc>
+         <lastmod>2024-06-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/langchain/functions/L5-tools-routing-apis-student/</loc>
+         <lastmod>2024-06-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://diefergil.github.io/personal-notes/generative_ai/tutorials/langchain/functions/L6-functional_conversation-student/</loc>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/mlops/continous_delivery/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/mlops/mlops_intro/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/mlops/tools/docker_file/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/mlops/tools/github_actions/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/mlops/tools/makefile/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/newsletter/0_newsletter_index/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/environments/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/pytest/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/apis/best_practices/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/apis/fastapi/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/apis/flask/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/cli/argparse/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/cli/click/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://diefergil.github.io/personal-notes/python/packaging/setuptools/</loc>
-         <lastmod>2024-03-08</lastmod>
+         <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
