@@ -49,6 +49,9 @@ nav:
               - Pytorch: generative_ai/tutorials/pytorch_intro.ipynb
               - Promting techniques workflow:
                   - generative_ai/tutorials/try_promt_techniques.ipynb
+                  - generative_ai/nlp/intro.md
+                  - generative_ai/tutorials/Building_QA_Datasets.ipynb
+                  - generative_ai/tutorials/wikipedia_qa.ipynb
               - React promt example: generative_ai/tutorials/example_ReAcT_prompt.ipynb # yamllint disable-line
               - Open AI call function: generative_ai/tutorials/openai_functions.ipynb # yamllint disable-line
               - Langchain parser chain: generative_ai/tutorials/langchain_examples.ipynb # yamllint disable-line
@@ -95,8 +98,8 @@ plugins:
   - minify:
       minify_html: true
   - section-index
-  # - mkdocs-newsletter
-  #TODO: check if it works & the problem with git in docker
+  # mkdocs-newsletter
+  # TODO: check if it works & the problem with git in docker
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "docs.hooks:copy_ads_txt"
@@ -125,9 +128,9 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+  # - pymdownx.emoji:
+  #     emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  #     emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
