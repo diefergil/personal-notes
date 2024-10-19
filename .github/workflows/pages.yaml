@@ -24,19 +24,22 @@ jobs:
     # be executed as part of the job
     steps:
       - uses: actions/checkout@v4
-      # Checks-out your repository under $GITHUB_WORKSPACE
-      #  so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v4
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v2
         with:
-          # Number of commits to fetch. 0 indicates all history.
-          # Default: 1
-          fetch-depth: 0
-      - uses: pdm-project/setup-pdm@v4
-        name: Setup Python and PDM
+          python-version: '3.10'
+
+
+      - name: Install PDM
+        uses: pdm-project/setup-pdm@v4
         with:
           python-version: 3.10
           allow-python-prereleases: false
+
+      - name: Clear Python Cache
+        run: |
+          sudo rm -rf /home/runner/.cache/pdm
 
       - name: Install dependencies
         run: make install
