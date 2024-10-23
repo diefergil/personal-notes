@@ -1,0 +1,5 @@
+rules:
+  line-length:
+    max: 120 # You can also just increase the length limit if that works for you
+    ignore: |
+      mkdocs.yaml

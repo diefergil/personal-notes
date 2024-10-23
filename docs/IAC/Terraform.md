@@ -71,6 +71,7 @@ Go to the [releases page](https://github.com/hashicorp/terraform/releases), down
   ```
 
 * tfenv: Install different versions of terraform
+
   ```bash
   git clone https://github.com/tfutils/tfenv.git ~/.tfenv
   echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.bashrc
@@ -84,7 +85,7 @@ Go to the [releases page](https://github.com/hashicorp/terraform/releases), down
   terraform version
   ```
 
-* https://github.com/eerkunt/terraform-compliance
+* <https://github.com/eerkunt/terraform-compliance>
 
 * [landscape](https://github.com/coinbase/terraform-landscape): A program to
   modify the `plan` and show a nicer version, really useful when it's shown as
@@ -100,7 +101,7 @@ Go to the [releases page](https://github.com/hashicorp/terraform/releases), down
 
 ## Editor Plugins
 
-For [Vim](vim.md):
+For Vim:
 
 * [vim-terraform](https://github.com/hashivim/vim-terraform): Execute tf from
     vim and autoformat when saving.
@@ -118,6 +119,7 @@ For [Vim](vim.md):
 
 * [Validate](https://www.terraform.io/docs/commands/validate.html): Tests that
   the syntax is correct.
+
   ```bash
   terraform validate
   ```
@@ -150,6 +152,7 @@ For [Vim](vim.md):
 * Terraform lint ([tflint](https://github.com/wata727/tflint)): Only works with
   some AWS resources. It allows the validation against a third party API. For
   example:
+
   ```hcl
     resource "aws_instance" "foo" {
       ami           = "ami-0ff8a91507f77f867"
@@ -252,6 +255,7 @@ For the use of maps inside maps or lists investigate `zipmap`
 To access you have to use `"${var.list_example}"`
 
 For secret variables we use:
+
 ```terraform
 variable "db_password" {
   description = "The password for the database"
@@ -260,6 +264,7 @@ variable "db_password" {
 
 Which has no default value, we save that password in our keystore and pass it as
 environmental variable
+
 ```bash
 export TF_VAR_db_password="{{ your password }}"
 terragrunt plan
@@ -272,6 +277,7 @@ always enable encryption for remote state storage in S3
 ## [Interpolation of variables](https://github.com/hashicorp/terraform/issues/4084)
 
 You can't interpolate in variables, so instead of
+
 ```terraform
 variable "sistemas_gpg" {
   description = "Sistemas public GPG key for Zena"
@@ -279,6 +285,7 @@ variable "sistemas_gpg" {
   default = "${file("sistemas_zena.pub")}"
 }
 ```
+
 You have to use locals
 
 ```terraform
@@ -328,6 +335,7 @@ With `terraform_remote_state` you an fetch the Terraform state file stored by
 another set of templates in a completely read-only manner.
 
 From an app template we can read the info of the ddbb with
+
 ```terraform
 data "terraform_remote_state" "db" {
   backend = "s3"
@@ -379,6 +387,7 @@ resource in Terraform. You can add a `lifecycle` block to any resource to
 configure how that resource should be created, updated or destroyed.
 
 The available options are:
+
 * `create_before_destroy`: Which if set to true will create a replacement
   resource before destroying hte original resource
 * `prevent_destroy`: If set to true, any attempt to delete that resource
@@ -425,9 +434,11 @@ resource "aws_security_group" "instance" {
 # Use collaboratively
 
 ## Share state
+
 The best option is to use S3 as bucket of the config.
 
 First create it
+
 ```terraform
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "terraform-up-and-running-state"
@@ -441,6 +452,7 @@ resource "aws_s3_bucket" "terraform_state" {
 ```
 
 And then configure terraform
+
 ```bash
 terraform remote config \
           -backend=s3 \
@@ -621,6 +633,7 @@ gpg --export {{ gpg_id }} | base64
 ```
 
 To see the secrets you have to decrypt it
+
 ```bash
 terraform output secret | base64 --decode | gpg -d
 ```
@@ -636,7 +649,7 @@ Your secrets live in two places in a terraform environment:
 
 ## Sensitive information in the Terraform State
 
-Every time you deploy infrastructure with Terraform, it stores lots of data about that infrastructure, including all the parameters you passed in, in a state file. By default, this is a terraform.tfstate file that is automatically generated in the folder where you ran terraform apply. 
+Every time you deploy infrastructure with Terraform, it stores lots of data about that infrastructure, including all the parameters you passed in, in a state file. By default, this is a terraform.tfstate file that is automatically generated in the folder where you ran terraform apply.
 
 That means that the secrets will end up in terraform.tfstate in plain text! This has been an [open issue](https://github.com/hashicorp/terraform/issues/516) for more than 6 years now, with no clear plans for a first-class solution. There are some workarounds out there that can scrub secrets from your state files, but these are brittle and likely to break with each new Terraform release, so I don’t recommend them.
 
@@ -666,7 +679,7 @@ Using Secret Stores is the best solution, but for that you'd need access and tru
 
 If you don't want to install a secret store and are used to work with GPG, you can encrypt the secrets, store the cipher text in a file, and checking that file into the version control system. To encrypt some data, such as some secrets in a file, you need an encryption key. This key is itself a secret! This creates a bit of a conundrum: how do you securely store that key? You can’t check the key into version control as plain text, as then there’s no point of encrypting anything with it. You could encrypt the key with another key, but then you then have to figure out where to store that second key. So you’re back to the “kick the can down the road problem,” as you still have to find a secure way to store your encryption key. Although you can use external solutions such as AWS KMS or GCP KMS we don't want to store that kind of information on big companies servers. A local and more beautiful way is to rely on PGP to do the encryption.
 
-We'll use then [`sops`](https://github.com/mozilla/sops) a Mozilla tool for managing secrets that can use PGP behind the scenes. `sops` can automatically decrypt a file when you open it in your text editor, so you can edit the file in plain text, and when you go to save those files, it automatically encrypts the contents again. 
+We'll use then [`sops`](https://github.com/mozilla/sops) a Mozilla tool for managing secrets that can use PGP behind the scenes. `sops` can automatically decrypt a file when you open it in your text editor, so you can edit the file in plain text, and when you go to save those files, it automatically encrypts the contents again.
 
 Terraform does not yet have native support for decrypting files in the format used by `sops`. One solution is to install and use the custom provider for sops, [`terraform-provider-sops`](https://github.com/carlpett/terraform-provider-sops). Another option, is to use [Terragrunt](https://terragrunt.gruntwork.io/). To avoid installing more tools, it's better to use the terraform provider.
 
@@ -827,6 +840,7 @@ terraform state mv -state-out=other.tfstate module.web module.web
 # [Google cloud integration](https://www.terraform.io/docs/providers/google/index.html)
 
 You configure it in the terraform directory
+
 ```terraform
 // Configure the Google Cloud provider
 provider "google" {
@@ -903,7 +917,6 @@ You can set the `TF_LOG` environmental variable to one of the log levels
 
 To remove the debug traces run `unset TF_LOG`.
 
-
 # Snippets
 
 ## [Create a list of resources based on a list of strings](https://developer.hashicorp.com/terraform/language/meta-arguments/count)
@@ -941,6 +954,6 @@ aws_instance.server.*.id
 * [AWS providers](https://www.terraform.io/docs/providers/aws/index.html)
 * [AWS examples](https://github.com/brikis98/terraform-up-and-running-code)
 * [GCloud examples](https://github.com/mjuenema/Terraform-Up-and-Running-Code-Samples-Translated/)
-* [Good and bad sides of terraform](https://charity.wtf/2016/02/23/two-weeks-with-terraform/)
+* [Good and bad sides of terraform](https://charity.wtf/2016/02/23/two-weeks-with-not-by-ai.svg/)
 * [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
-[![](not-by-ai.svg){: .center}](https://notbyai.fyi)
+[![]{: .center}](https://notbyai.fyi)

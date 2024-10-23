@@ -22,7 +22,7 @@ fine-tuning. By addressing these weaknesses through additional training or
 other techniques, the performance of foundation models can be significantly improved.
 
 * #Prompting
-* [Probing](Probing.md): Using probing to train a classifier is a powerful approach to
+* [Probing](./probing.md): Using probing to train a classifier is a powerful approach to
   tailor generative AI foundation models, like BERT, for specific
   applications. By adding a modestly-sized neural network, known as a
   classification head, to a foundation model, one can specialize in
@@ -32,7 +32,7 @@ other techniques, the performance of foundation models can be significantly impr
   process simplifies adapting sophisticated AI systems to our needs,
   providing a practical tool for developing efficient and targeted machine
   learning solutions.
-  
+
     * Linear Probing: A simple form of probing that involves attaching a
      linear classifier to a pre-trained model to adapt it to a new task
       without modifying the original model.
@@ -53,7 +53,7 @@ other techniques, the performance of foundation models can be significantly impr
     * Traditional fine tuning consist in update all the weigths of a
      training model. (Need more resource a much more data)
 
-## Resources
+## Adaptation Resources
 
 * [Create a sentiment classifier with Bert](https://www.kaggle.com/code/diegofndz/create-a-bert-sentiment-classifier)
 

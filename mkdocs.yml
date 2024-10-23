@@ -12,30 +12,22 @@ nav:
           - Batch: cloud/aws/batch.md
           - Lambda functions: cloud/aws/lambda.md
           - Steps: cloud/aws/steps.md
-      - Github:
-          - Codespaces: cloud/github/codespaces.md
       - Google Cloud:
+          - gcloud CLI: cloud/google/gcloud.md
           - App Engine: cloud/google/app_engine.md
           - Cloud Functions: cloud/google/cloud_functions.md
           - Cloud Run: cloud/google/cloud_run.md
-  - Data Science:
-      - Statistics:
-          - Introduction: data_science/statistics/intro.ipynb
+          - Bigquery: cloud/google/Bigquery.md
   - Generative AI:
       - Introduction: generative_ai/introduction.md
+      - NLP: generative_ai/nlp/Natural Language Processing.md
       - Adapting foundational models:
-          - Introduction: generative_ai/adapting_models.md
           - Prompting: generative_ai/prompting.md
-          - Instruction Fine-Tuning:
-              - generative_ai/instruction_fine_tuning.md
-          - Reinforcement Learning From Human Feedback:
-              - generative_ai/rlhf.md
-          - PEFT: generative_ai/peft.md
-          - LoRa: generative_ai/lora.md
+          - Instruction Fine-Tuning: generative_ai/Fine Tuning.md
+          - Reinforcement Learning From Human Feedback: generative_ai/Reinforcement Learning From Human Feedback.md
           - Probing: generative_ai/probing.md
-      - Evaluation: generative_ai/evaluation.md
-      - Deployment: generative_ai/deployment.md
-      - Build applications: generative_ai/build_applications.md
+      - Evaluation: generative_ai/Evaluate LLMs.md
+      - Deployment: generative_ai/Deploy LLMS.md
       - HuggingFace:
           - Overview: generative_ai/huggingface.md
           - Key components: generative_ai/tutorials/hugginface_intro.ipynb
@@ -45,27 +37,33 @@ nav:
           - Lance DB: generative_ai/tutorials/lance_db.ipynb
           - Lance DB Multimodal: generative_ai/tutorials/lance_db_multimodal.ipynb # yamllint disable-line
       - Tutorials:
-          - Generative AI:
-              - Pytorch: generative_ai/tutorials/pytorch_intro.ipynb
-              - Promting techniques workflow:
-                  - generative_ai/tutorials/try_promt_techniques.ipynb
-                  - generative_ai/nlp/intro.md
-                  - generative_ai/tutorials/Building_QA_Datasets.ipynb
-                  - generative_ai/tutorials/wikipedia_qa.ipynb
-              - React promt example: generative_ai/tutorials/example_ReAcT_prompt.ipynb # yamllint disable-line
-              - Open AI call function: generative_ai/tutorials/openai_functions.ipynb # yamllint disable-line
-              - Langchain parser chain: generative_ai/tutorials/langchain_examples.ipynb # yamllint disable-line
-              - Transfer Learning:
-                  - Retrain mobilenet:
-                      - generative_ai/tutorials/transfer-learning-mobilenet.ipynb
-              - GANs: generative_ai/tutorials/train_gans.ipynb
-              - DDPM: generative_ai/tutorials/training_DDPM.ipynb
-
+          - Pytorch: generative_ai/tutorials/pytorch_intro.ipynb
+          - Promting techniques workflow:
+              - generative_ai/tutorials/try_promt_techniques.ipynb
+              - generative_ai/tutorials/Building_QA_Datasets.ipynb
+              - generative_ai/tutorials/wikipedia_qa.ipynb
+          - React promt example: generative_ai/tutorials/example_ReAcT_prompt.ipynb # yamllint disable-line
+          - Open AI call function: generative_ai/tutorials/openai_functions.ipynb # yamllint disable-line
+          - Langchain parser chain: generative_ai/tutorials/langchain_examples.ipynb # yamllint disable-line
+          - Transfer Learning:
+              - Retrain mobilenet:
+                  - generative_ai/tutorials/transfer-learning-mobilenet.ipynb
+          - GANs: generative_ai/tutorials/train_gans.ipynb
+          - DDPM: generative_ai/tutorials/training_DDPM.ipynb
+          - Langchain:
+              - generative_ai/tutorials/langchain/snnipets.md
+              - generative_ai/tutorials/langchain/agents/Lesson_2_Student.ipynb
+              - generative_ai/tutorials/langchain/agents/Lesson_4_Student.ipynb
+              - generative_ai/tutorials/langchain/agents/Lesson_5_Student.ipynb
+              - generative_ai/tutorials/langchain/agents/helper.py
+              - generative_ai/tutorials/langchain/functions/L2-lcel-student.ipynb
+              - generative_ai/tutorials/langchain/functions/L5-tools-routing-apis-student.ipynb
+              - generative_ai/tutorials/langchain/functions/L6-functional_conversation-student.ipynb
   - Mlops:
       - Introduction: mlops/mlops_intro.md
       - Continous integration: mlops/continous_delivery.md
       - Tools:
-          - Docker: mlops/tools/docker_file.md
+          - Docker: mlops/tools/Docker.md
           - Github actions: mlops/tools/github_actions.md
           - Makefile: mlops/tools/makefile.md
   - Python:
@@ -80,8 +78,12 @@ nav:
           - Virtual environments: python/environments.md
       - Packaging:
           - Setuptools: python/packaging/setuptools.md
+          - Poetry: python/packaging/Poetry.md
       - Tests:
           - Pytests: python/pytest.md
+  - Infrastructure:
+      - Pulumi: IAC/Pulumi.md
+      - Terraform: IAC/Terraform.md
   - About: about.md
 
 plugins:

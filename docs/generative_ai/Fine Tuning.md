@@ -53,9 +53,9 @@ According to the LoRA paper:
     trainable parameters and preserving performance.
 * Relationship between rank and dataset size needs more research.
 
-## Hugging Face PEFT Library
+## Hugging Face PEFT
 
-### Key Concepts
+### Concepts
 
     1. Hugging Face PEFT allows you to fine-tune a model without having to fine-tune
     all of its parameters.
@@ -87,8 +87,6 @@ Look at the LoRA adapter documentation for additional hyperparameters that can
 be specified by passing arguments to `LoraConfig()`. [The Hugging Face LoRA
 conceptual guide](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora)
  also contains additional explanations.
-
-See te complete example [here](./lora.md)
 
 #### Converting a Transformers Model into a PEFT Model
 
@@ -172,7 +170,7 @@ outputs = model.generate(input_ids=inputs["input_ids"], max_new_tokens=10)
 print(tokenizer.batch_decode(outputs))
 ```
 
-## Resources
+## Lora Resources
 
 * [Lora intro](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora)
 * [Hugging Face PEFT configuration](https://huggingface.co/docs/peft/package_reference/config)
@@ -198,7 +196,6 @@ training, so much so that PEFT can often be performed on a single GPU.
 Since most of the LLM is left unchanged, PEFT is also less prone to Catastrophic
 Forgetting.
 
-
 ## Selective
 
 We select a subset of initial LLM parameters to fine-tune.
@@ -217,7 +214,6 @@ and hence, these methods are not very popular.
 
 The model weights are reparameterized using a low-rank representation.
 Example techniques are Low Rank Adaptation (LoRA). More detail in its page:
-[Link](./lora.md)
 
 ## Additive
 
@@ -272,7 +268,7 @@ Converting the model into a PEFT model using the PEFT config
 Inference using a PEFT model is almost identical to inference using a non-PEFT
  model. The only difference is that it must be loaded as a PEFT model.
 
-### Training with PEFT
+### Training PEFT
 
 The PEFT config specifies the adapter configuration for your parameter-efficient
  fine-tuning process. The base class for this is a `PeftConfig`, but this example
@@ -289,9 +285,6 @@ Look at the LoRA adapter documentation for additional hyperparameters that can
 be specified by passing arguments to `LoraConfig()`. [The Hugging Face LoRA
 conceptual guide](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora)
  also contains additional explanations.
-
-See te complete example [here](./lora.md)
-
 
 # Instruction Fine-Tuning
 
@@ -406,8 +399,7 @@ perform fine-tuning on multiple tasks at the same time. This generally requires
 50,000-100,000 examples across many tasks.
 Another alternative is Parameter Efficient Fine-Tuning (PEFT). PEFT
 preserves the weights of the original LLM and trains only a small number of
-task-specific adapter layers and parameters (see [Parameter Efficient Fine-Tuning
-(PEFT)](./peft.md)).
+task-specific adapter layers and parameters (see [Parameter Efficient Fine-Tuning.
 
 ## Fine-Tuning On Multiple Tasks
 
@@ -446,6 +438,6 @@ by linguists for the express purpose of training LLMs.
 Note that while FLAN models are general-purpose, we might still need Domain
 Adaptation for it to make it work well for our application.
 
-# Resources
+## Instruction Fine tuning Resources
 
 * [Create a sentiment classifier with Bert](https://www.kaggle.com/code/diegofndz/create-a-bert-sentiment-classifier)
