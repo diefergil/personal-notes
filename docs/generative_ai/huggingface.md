@@ -1,3 +1,9 @@
+---
+Area: "[[Generative AI]]"
+tags:
+  - resource
+  - huggingface
+---
 # Hugginface
 
 ## Hugginface CLI

@@ -1,3 +1,8 @@
+---
+tags:
+  - resource
+Area: "[[Generative AI]]"
+---
 # Using Probing Tasks to Train a Classifier with Foundational Models
 
 ## 1. Select a Foundational Model

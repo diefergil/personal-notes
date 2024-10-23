@@ -1,4 +1,9 @@
-# NLP: Natural Language Processing
+---
+Area: "[[Generative AI]]"
+tags:
+  - resource
+---
+## Intro
 
 NLP stands for "natural language processing" and forms the bridge between human
  communication and computer logic.

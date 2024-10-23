@@ -1,3 +1,62 @@
+---
+tags:
+  - resource
+Area: "[[Generative AI]]"
+---
+
+# Adaptation
+
+Adaptation in AI is a crucial step to enhance the capabilities of
+foundation models, allowing them to cater to specific tasks and domains.
+This process is about tailoring pre-trained AI systems with new data,
+ensuring they perform optimally in specialized applications and respect
+privacy constraints. Reaping the benefits of adaptation leads to AI models
+that are not only versatile but also more aligned with the unique needs of
+organizations and industries.
+
+Adapting foundation models is essential due to their limitations in
+specific areas despite their extensive training on large datasets.
+Although they excel at many tasks, these models can sometimes misconstrue
+questions or lack up-to-date information, which highlights the need for
+fine-tuning. By addressing these weaknesses through additional training or
+other techniques, the performance of foundation models can be significantly improved.
+
+* #Prompting
+* [Probing](Probing.md): Using probing to train a classifier is a powerful approach to
+  tailor generative AI foundation models, like BERT, for specific
+  applications. By adding a modestly-sized neural network, known as a
+  classification head, to a foundation model, one can specialize in
+  particular tasks such as sentiment analysis. This technique involves
+  freezing the original model's parameters and only adjusting the
+  classification head through training with labeled data. Ultimately, this
+  process simplifies adapting sophisticated AI systems to our needs,
+  providing a practical tool for developing efficient and targeted machine
+  learning solutions.
+  
+    * Linear Probing: A simple form of probing that involves attaching a
+     linear classifier to a pre-trained model to adapt it to a new task
+      without modifying the original model.
+
+    * Classification Head: It is the part of a neural network that is
+     tailored to classify input data into defined categories.
+* Transfer learning
+    * Fine Tuning: Fine-tuning is an important phase in enhancing the
+    abilities of generative AI models, making them adept at specific tasks.
+    By introducing additional data to these powerful models, they can be
+    tailored to meet particular requirements, which is invaluable in making
+    AI more effective and efficient. Although this process comes with its
+    challenges, such as the need for significant computational resources
+    and data, the outcome is a more specialized and capable AI system
+    that can bring value to a wide range of applications.
+
+    * Fine tuning is a type of transfer learning.
+    * Traditional fine tuning consist in update all the weigths of a
+     training model. (Need more resource a much more data)
+
+## Resources
+
+* [Create a sentiment classifier with Bert](https://www.kaggle.com/code/diegofndz/create-a-bert-sentiment-classifier)
+
 # Prompting
 
 The text that is fed to LLMs as input is called the prompt and the act of
@@ -162,3 +221,67 @@ A car travels 150 kilometers in the first 5 hours of its journey. For the
 next 5 hours, it travels at a speed of 60 kilometers per hour. What is the
 average speed of the car for the entire journey?
 ```
+
+# Build LLM-powered applications
+
+## Chain of thought
+
+At its core, CoT prompting spurs reasoning in LLMs via decomposition. When we
+tackle a complicated enough math or logic question, we often can’t help but break
+ the larger problem into a series of intermediate steps that help us arrive at a
+  final answer.
+
+## Program-aided laguage models
+
+The Program-Aided Language Model (PAL) method uses LLMs to read natural language
+problems and generate programs as reasoning steps. The code is executed by a
+ interpreter to produce the answer.
+
+## ReAct: Synergizing Reasonning and Actions in LLMs
+
+ ReAct enables LLMs to generate reasoning traces and task-specific actions,
+ leveraging the synergy between them. The approach demonstrates superior
+ performance over baselines in various tasks, overcoming issues like hallucination
+ and error propagation. ReAct outperforms imitation and reinforcement learning
+ methods in interactive decision making, even with minimal context examples.
+ It not only enhances performance but also improves interpretability,
+ trustworthiness, and diagnosability by allowing humans to distinguish between
+ internal knowledge and external information.
+
+In summary, ReAct bridges the gap between reasoning and acting in LLMs, yielding
+remarkable results across language reasoning and decision making tasks. By
+interleaving reasoning traces and actions, ReAct overcomes limitations and
+outperforms baselines, not only enhancing model performance but also providing
+interpretability and trustworthiness, empowering users to understand the
+model's decision-making process.
+
+![ReAct](ReAct.png)
+
+The figure provides a comprehensive visual comparison of different prompting
+methods in two distinct domains. The first part of the figure (1a) presents a
+comparison of four prompting methods: Standard, Chain-of-thought (CoT, Reason Only),
+Act-only, and ReAct (Reason+Act) for solving a HotpotQA question. Each method's
+approach is demonstrated through task-solving trajectories generated by the model
+(Act, Thought) and the environment (Obs). The second part of the figure (1b)
+focuses on a comparison between Act-only and ReAct prompting methods to solve
+an AlfWorld game. In both domains, in-context examples are omitted from the prompt,
+highlighting the generated trajectories as a result of the model's actions and
+thoughts and the observations made in the environment. This visual representation
+enables a clear understanding of the differences and advantages offered by the ReAct
+paradigm compared to other prompting methods in diverse task-solving scenarios.
+
+[Paper Link](https://arxiv.org/abs/2210.03629)
+
+## Resources
+
+* [Chain-of-thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)
+Paper by researchers at Google exploring how chain-of-thought prompting improves
+the ability of LLMs to perform complex reasoning.
+
+* [PAL: Program-aided Language Models](https://arxiv.org/abs/2211.10435): This
+paper proposes an approach that uses the LLM to read natural language problems
+and generate programs as the intermediate reasoning steps.
+
+* [ReAct](https://arxiv.org/abs/2210.03629): Synergizing Reasoning and Acting
+in Language Models: This paper presents an advanced prompting technique that allows
+an LLM to make decisions about how to interact with external applications.

@@ -1,3 +1,8 @@
+---
+Area: "[[Generative AI]]"
+tags:
+  - resource
+---
 # Deploymennt LLM
 
 ![Cheat sheet - Time and effort lifecycle](llm_workflow_cheatsheet.png)

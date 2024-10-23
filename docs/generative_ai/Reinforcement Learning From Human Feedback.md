@@ -1,3 +1,8 @@
+---
+tags:
+  - resource
+Area: "[[Generative AI]]"
+---
 # Reinforcement Learning From Human Feedback (RLHF)
 
 Reinforcement Learning From Human Feedback (RLHF) is a technique used to

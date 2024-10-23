@@ -1,3 +1,8 @@
+---
+tags:
+  - resource
+Area: "[[Generative AI]]"
+---
 # Generative AI
 
 It is a subset of traditional ML. The ML algorithms that work behind generative
@@ -473,7 +478,6 @@ probabilities in its random sampling. Consider the following softmax output:
     0.10 donut
     0.02 banana
     0.01 apple
-    . . . . . .
     ```
 
     If K = 3, the model will select one of cake, donut or banana. This allows the

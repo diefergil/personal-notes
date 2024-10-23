@@ -1,3 +1,8 @@
+---
+Area: "[[Generative AI]]"
+tags:
+  - resource
+---
 # Evaluating LLMS
 
 ## Metrics

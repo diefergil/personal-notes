@@ -6,6 +6,7 @@ tags:
   - Microservices
   - App
   - Runner
+  - resource
 Area: "[[Amazon web services]]"
 ---
 # AWS App Runner
