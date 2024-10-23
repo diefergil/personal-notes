@@ -4,7 +4,9 @@ tags:
   - Devops
   - AWS
   - Microservices
-  - AWS Steps
+  - AWS
+  - Steps
+Area: "[[Amazon web services]]"
 ---
 
 # AWS Step Functions

@@ -1,4 +1,10 @@
-# Google Cloud Functions: Serverless Computing Made Easy
+---
+tags:
+  - resource
+Area: "[[Google cloud]]"
+---
+
+## Google Cloud Functions: Serverless Computing Made Easy
 
 ![Google Cloud Functions](https://example.com/cloud-functions-image.jpg)
 
@@ -141,3 +147,4 @@ Google Cloud Functions offers a powerful and convenient platform for building
      infrastructure management. By leveraging the power of serverless
       computing, businesses can optimize resource utilization, reduce costs,
        and accelerate their application development process.
+

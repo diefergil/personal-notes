@@ -4,7 +4,9 @@ tags:
   - Devops
   - AWS
   - Microservices
-  - AWS Batch
+  - AWS
+  - Batch
+Area: "[[Amazon web services]]"
 ---
 
 # AWS Batch

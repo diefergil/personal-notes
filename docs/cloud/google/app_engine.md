@@ -1,11 +1,15 @@
 ---
 tags:
   - Mlops
-  - Continuous Integration
+  - Continuous
+  - Integration
   - FastApi
   - Devops
-  - Google Cloud
+  - Google
+  - Cloud
   - Microservices
+  - resource
+Area: "[[Google cloud]]"
 ---
 # Google App Engine
 

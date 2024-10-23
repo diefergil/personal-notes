@@ -1,4 +1,10 @@
-# Cloud Run: Scaling Machine Learning Applications with Ease
+---
+tags:
+  - resource
+Area: "[[Google cloud]]"
+---
+
+## Cloud Run: Scaling Machine Learning Applications with Ease
 
 ![Cloud Run](https://example.com/cloud-run-image.jpg)
 

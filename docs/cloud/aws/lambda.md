@@ -4,7 +4,9 @@ tags:
   - Devops
   - AWS
   - Microservices
-  - AWS Lambda
+  - AWS
+  - Lambda
+Area: "[[Amazon web services]]"
 ---
 
 # Using Python with AWS Lambda: A Comprehensive Guide

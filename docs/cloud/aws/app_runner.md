@@ -4,7 +4,9 @@ tags:
   - Devops
   - AWS
   - Microservices
-  - App Runner
+  - App
+  - Runner
+Area: "[[Amazon web services]]"
 ---
 # AWS App Runner
 

@@ -2,6 +2,8 @@
 tags:
   - gcloud
   - GCP
+  - resource
+Area: "[[Google cloud]]"
 ---
 | Command                                                      | Description                                                                           |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
@@ -23,3 +25,4 @@ tags:
 | `gcloud artifacts repositories create <REPO_NAME>`           | Creates a new repository in Artifact Registry.                                        |
 | `gcloud artifacts repositories delete <REPO_NAME>`           | Deletes a repository from Artifact Registry.                                          |
 | `gcloud config set artifacts/location <LOCATION>`            | Sets the location of the Artifact Registry repository.                                |
+|                                                              |                                                                                       |

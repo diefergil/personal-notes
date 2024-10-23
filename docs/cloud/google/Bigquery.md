@@ -3,6 +3,8 @@ tags:
   - GCP
   - BigQuery
   - DataBase
+  - resource
+Area: "[[Google cloud]]"
 ---
 
 ## Python
@@ -20,3 +22,6 @@ def extract_table(db_name, table, project, location):
 	
 	return table
 ```
+
+
+
